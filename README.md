@@ -1,21 +1,18 @@
 # newsweek
 
-USING BOOTSTRAP
+>USING BOOTSTRAP
 
-# Youtube Clone
-
-EMBEDDING IMAGES AND VIDEO
 
 ## Built With
 
 - HTML5
+- BOOTSTRAP
 - CSS3
 
 ## Live Demo
 
-[Live Demo Link](https://paulzay.github.io/youtube/)
+[Live Demo Link](https://paulzay.github.io/newsweek/)
 
-![Screenshot (327)](https://user-images.githubusercontent.com/29974825/80791827-8b363a00-8b9b-11ea-9d90-89618b15749d.png)
 
 # Getting Started 🚀
 
@@ -27,38 +24,28 @@ From your command line, first clone the project:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/paulzay/youtube
+$ git clone https://github.com/paulzay/newsweek
 
 # Go into the repository
 $ cd youtube
 
-# Remove current origin repository
-$ git remote remove origin
 ```
 
-## Authors
+## CONTRIBUTOR
 
 👤 **Paul Ogolla**
 
-- Github: [@githubhandle](https://github.com/paulzay)
-- Twitter: [@twitterhandle](https://twitter.com/_paulzay_)
-- Linkedin: [linkedin](https://linkedin.com/in/paulogolla)
+- [Github](https://github.com/paulzay)
+- [Twitter](https://twitter.com/_paulzay_)
+- [Linkedin](https://linkedin.com/in/paulogolla)
 
-👤 **Haroon Abdulrazaq**
-
-- Github: [@githubhandle](https://github.com/Haroonabdulrazaq)
-- Twitter: [@twitterhandle](https://twitter.com/hanq_o)
-- Linkedin: [linkedin](https://www.linkedin.com/in/haroon-abdulrazaq-817906100/)
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-
-- We'd like to thank our standup group for reviewing our project.
-- We also acknowledge Microverse for being awesome.
-- Lastly we appreciate The Odin Project for creating the project.
+- Thanks to Microverse, The Odin Project and the Sphynx Team
 
 ## 📝 License
 
