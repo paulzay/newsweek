@@ -27,7 +27,7 @@ From your command line, first clone the project:
 $ git clone https://github.com/paulzay/newsweek
 
 # Go into the repository
-$ cd youtube
+$ cd newsweek
 
 ```
 
