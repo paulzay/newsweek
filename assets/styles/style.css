@@ -1,0 +1,44 @@
+@import url(/home/zay/microverse/newsweek/assets/styles/reset.css);
+* a {
+  text-decoration: none;
+}
+
+* li {
+  list-style: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f5f6;
+  color: #333;
+  font-size: 16px;
+}
+
+nav {
+  background-color: #f72210;
+}
+
+nav svg {
+  width: 100%;
+  fill: #fff;
+}
+
+nav .heads {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+  padding: 20px 20px 0 20px;
+}
+
+nav .d-flex {
+  background-color: #fff;
+  color: #333;
+  font-size: 1.1em;
+  height: 3.5em;
+  padding-top: 10px;
+}
+/*# sourceMappingURL=style.css.map */

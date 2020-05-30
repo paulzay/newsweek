@@ -1,0 +1,68 @@
+@import "./reset.css";
+
+//VARIABLES
+
+$font-stack: 'Roboto',
+sans-serif;
+$white: #fff;
+$red : #f72210;
+$BR: hsl(12, 88%, 59%);
+$D-B: hsl(228, 39%, 23%);
+$D-G-B: hsl(227, 12%, 61%);
+$V-D: hsl(233, 12%, 13%);
+$V-P-R: hsl(13, 100%, 96%);
+$V-L-G: hsl(0, 0%, 98%);
+
+//STYLES
+* a {
+  text-decoration: none;
+}
+
+* li {
+  list-style: none;
+}
+
+body {
+
+  font-family: $font-stack;
+  background-color: #f4f5f6;
+  color: #333;
+  font-size: 16px;
+}
+
+
+// @include media-breakpoint-up(sm) {}
+
+// @include media-breakpoint-up(md) {}
+
+// @include media-breakpoint-up(lg) {}
+
+// @include media-breakpoint-up(xl) {
+//   .header {
+//     display: flex;
+//   }
+// }
+
+nav {
+  background-color: $red;
+
+  svg {
+    width: 100%;
+    fill: $white;
+  }
+
+  .heads {
+    display: flex;
+    justify-content: space-between;
+    color: $white;
+    padding: 20px 20px 0 20px;
+  }
+
+  .d-flex {
+    background-color: $white;
+    color: #333;
+    font-size: 1.1em;
+    height: 3.5em;
+    padding-top: 10px;
+  }
+}
