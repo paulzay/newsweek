@@ -22,13 +22,13 @@
     <link rel="stylesheet" href="./assets/styles/style.css" />
   </head>
   <body>
-    <nav>
-      <div class="heads">
-        <div class="date">
-          <p><span id="times"></span></p>
+    <header>
+      <div class="row align-items-end news">
+        <div class="col date">
+          <p><span>Nairobi Kenya</span></p>
           <p><span id="datetime"></span></p>
         </div>
-        <div class="logo">
+        <div class="col img-logo">
           <svg
             version="1.1"
             id="Layer_1"
@@ -48,13 +48,13 @@
             </g>
           </svg>
         </div>
-        <div class="reg-btns">
-          <a href="#">LOGIN</a>
-          <a href="#" class="btn">SUBSCRIBE</a>
+        <div class="col text-right justify-items-end link-container">
+          <a class="login" href="#">LOGIN</a>
+          <button type="button" class="btn btn-yellow">SUBSCRIBE</button>
         </div>
       </div>
 
-      <div>
+      <nav>
         <ul class="nav d-flex">
           <li class="nav-item">
             <a class="nav-link" href="#">U.S.</a>
@@ -103,8 +103,8 @@
             <i class="fa fa-search"></i>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </header>
     <main class="container-fluid"></main>
     <footer></footer>
     <script src="./assets/js/app.js"></script>
