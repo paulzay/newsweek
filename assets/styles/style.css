@@ -50,6 +50,16 @@ header .btn-yellow {
 
 .row h3 {
   color: #999;
-  font-size: 18px;
+  font-size: 16px;
+}
+
+.categories {
+  margin: 30px 5px 0 5px;
+}
+
+.categories .ft-stories,
+.categories .tp-story,
+.categories .debate {
+  background-color: red;
 }
 /*# sourceMappingURL=style.css.map */

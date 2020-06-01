@@ -75,5 +75,13 @@ header {
 }
 .row h3 {
   color: #999;
-  font-size: 18px;
+  font-size: 16px;
+}
+.categories {
+  margin: 30px 5px 0 5px;
+  .ft-stories,
+  .tp-story,
+  .debate {
+    background-color: red;
+  }
 }
