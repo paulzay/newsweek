@@ -47,4 +47,9 @@ header .btn-yellow {
   color: #333;
   border-right: 1px solid rgba(3, 3, 3, 0.4);
 }
+
+.row h3 {
+  color: #999;
+  font-size: 18px;
+}
 /*# sourceMappingURL=style.css.map */

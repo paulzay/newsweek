@@ -2,10 +2,9 @@
 
 //VARIABLES
 
-$font-stack: 'Roboto',
-sans-serif;
+$font-stack: "Roboto", sans-serif;
 $white: #fff;
-$red : #f72210;
+$red: #f72210;
 $BR: hsl(12, 88%, 59%);
 $D-B: hsl(228, 39%, 23%);
 $D-G-B: hsl(227, 12%, 61%);
@@ -23,13 +22,11 @@ $V-L-G: hsl(0, 0%, 98%);
 }
 
 body {
-
   font-family: $font-stack;
   background-color: #f4f5f6;
   color: #333;
   font-size: 16px;
 }
-
 
 // @include media-breakpoint-up(sm) {}
 
@@ -69,10 +66,14 @@ header {
   font-size: 1.1em;
   height: 3.5em;
   padding-top: 10px;
-  border-bottom: 1px solid rgba(3, 3, 3, .4);
+  border-bottom: 1px solid rgba(3, 3, 3, 0.4);
 
   .nav-link {
     color: #333;
-    border-right: 1px solid rgba(3, 3, 3, .4);
+    border-right: 1px solid rgba(3, 3, 3, 0.4);
   }
+}
+.row h3 {
+  color: #999;
+  font-size: 18px;
 }
