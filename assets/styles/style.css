@@ -9,7 +9,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #f4f5f6;
+  background-color: #fff;
   color: #333;
   font-size: 16px;
 }
@@ -55,5 +55,43 @@ header .btn-yellow {
 
 .categories {
   margin: 30px 0px 0 0px;
+}
+
+.sgnup {
+  color: #333;
+  background-color: #f4f5f6;
+  padding: 20px;
+  margin: 30px;
+  border: 1px solid #e5e5e5;
+}
+
+.sgnup .top {
+  display: inline;
+}
+
+.sgnup .top img {
+  float: left;
+  margin-right: 20px;
+}
+
+.sgnup form {
+  margin-top: 15px;
+}
+
+.sgnup form .f-text {
+  width: 100%;
+  padding-left: 10px;
+  font-weight: 300;
+  line-height: 30px;
+  border: 1px solid #e0e1e1;
+}
+
+.sgnup form .submit {
+  background-color: #f72210;
+  border: none;
+  width: 100%;
+  margin-top: 10px;
+  height: 30px;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

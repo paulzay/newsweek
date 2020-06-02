@@ -23,7 +23,7 @@ $V-L-G: hsl(0, 0%, 98%);
 
 body {
   font-family: $font-stack;
-  background-color: #f4f5f6;
+  background-color: $white;
   color: #333;
   font-size: 16px;
 }
@@ -73,15 +73,45 @@ header {
     border-right: 1px solid rgba(3, 3, 3, 0.4);
   }
 }
+
 .row h3 {
   color: #999;
   font-size: 16px;
 }
+
 .categories {
   margin: 30px 0px 0 0px;
-  .ft-stories,
-  .tp-story,
-  .debate {
-    // background-color: red;
+}
+
+.sgnup {
+  color: #333;
+  background-color: #f4f5f6;
+  padding: 20px;
+  margin: 30px;
+  border: 1px solid #e5e5e5;
+  .top {
+    display: inline;
+    img {
+      float: left;
+      margin-right: 20px;
+    }
+  }
+  form {
+    margin-top: 15px;
+    .f-text {
+      width: 100%;
+      padding-left: 10px;
+      font-weight: 300;
+      line-height: 30px;
+      border: 1px solid #e0e1e1;
+    }
+    .submit {
+      background-color: $red;
+      border: none;
+      width: 100%;
+      margin-top: 10px;
+      height: 30px;
+      color: $white;
+    }
   }
 }
