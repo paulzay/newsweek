@@ -26,6 +26,91 @@ body {
   background-color: $white;
   color: #333;
   font-size: 16px;
+  header {
+    .news {
+      padding: 20px;
+    }
+
+    color: $white;
+    background-color: $red;
+
+    svg {
+      fill: $white;
+    }
+
+    .login {
+      color: $white;
+    }
+
+    .btn-yellow {
+      background-color: yellow;
+    }
+  }
+
+  .d-flex {
+    background-color: $white;
+    font-size: 1.1em;
+    height: 3.5em;
+    padding-top: 10px;
+    border-bottom: 1px solid rgba(3, 3, 3, 0.4);
+
+    .nav-link {
+      color: #333;
+      border-right: 1px solid rgba(3, 3, 3, 0.4);
+    }
+  }
+
+  .row h3 {
+    color: #999;
+    font-size: 16px;
+  }
+
+  .categories {
+    margin: 30px 0px 0 0px;
+  }
+
+  .sgnup {
+    color: #333;
+    background-color: #f4f5f6;
+    padding: 20px;
+    margin: 30px;
+    border: 1px solid #e5e5e5;
+    .top {
+      display: inline;
+      img {
+        float: left;
+        margin-right: 20px;
+      }
+    }
+    form {
+      margin-top: 15px;
+      .f-text {
+        width: 100%;
+        padding-left: 10px;
+        font-weight: 300;
+        line-height: 30px;
+        border: 1px solid #e0e1e1;
+      }
+      .submit {
+        background-color: $red;
+        border: none;
+        width: 100%;
+        margin-top: 10px;
+        height: 30px;
+        color: $white;
+      }
+    }
+  }
+  .magazine {
+    margin-top: 30px;
+  }
+  .mag-head {
+    text-align: center;
+  }
+  .arts {
+    display: flex;
+    align-items: flex-end;
+  }
 }
 
 // @include media-breakpoint-up(sm) {}
@@ -39,79 +124,3 @@ body {
 //     display: flex;
 //   }
 // }
-
-header {
-  .news {
-    padding: 20px;
-  }
-
-  color: $white;
-  background-color: $red;
-
-  svg {
-    fill: $white;
-  }
-
-  .login {
-    color: $white;
-  }
-
-  .btn-yellow {
-    background-color: yellow;
-  }
-}
-
-.d-flex {
-  background-color: $white;
-  font-size: 1.1em;
-  height: 3.5em;
-  padding-top: 10px;
-  border-bottom: 1px solid rgba(3, 3, 3, 0.4);
-
-  .nav-link {
-    color: #333;
-    border-right: 1px solid rgba(3, 3, 3, 0.4);
-  }
-}
-
-.row h3 {
-  color: #999;
-  font-size: 16px;
-}
-
-.categories {
-  margin: 30px 0px 0 0px;
-}
-
-.sgnup {
-  color: #333;
-  background-color: #f4f5f6;
-  padding: 20px;
-  margin: 30px;
-  border: 1px solid #e5e5e5;
-  .top {
-    display: inline;
-    img {
-      float: left;
-      margin-right: 20px;
-    }
-  }
-  form {
-    margin-top: 15px;
-    .f-text {
-      width: 100%;
-      padding-left: 10px;
-      font-weight: 300;
-      line-height: 30px;
-      border: 1px solid #e0e1e1;
-    }
-    .submit {
-      background-color: $red;
-      border: none;
-      width: 100%;
-      margin-top: 10px;
-      height: 30px;
-      color: $white;
-    }
-  }
-}
