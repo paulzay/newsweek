@@ -109,13 +109,31 @@ body {
   }
 
   .magazine {
-    margin-top: 30px;
+    margin: 30px 20px;
+    .feats a {
+      color: #333;
+      font-size: 20px;
+      text-align: center;
+    }
+    .ft-pad {
+      border: none !important;
+      .card-body {
+        padding: 10px 0 !important;
+        .cat span:nth-child(1) {
+          background-color: $red;
+          color: white;
+        }
+        h3 a {
+          color: #333;
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+    }
   }
-
   .mag-head {
     text-align: center;
   }
-
   .arts {
     display: flex;
     align-items: flex-end;

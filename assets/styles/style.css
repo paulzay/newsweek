@@ -96,7 +96,32 @@ body .sgnup form .submit {
 }
 
 body .magazine {
-  margin-top: 30px;
+  margin: 30px 20px;
+}
+
+body .magazine .feats a {
+  color: #333;
+  font-size: 20px;
+  text-align: center;
+}
+
+body .magazine .ft-pad {
+  border: none !important;
+}
+
+body .magazine .ft-pad .card-body {
+  padding: 10px 0 !important;
+}
+
+body .magazine .ft-pad .card-body .cat span:nth-child(1) {
+  background-color: #f72210;
+  color: white;
+}
+
+body .magazine .ft-pad .card-body h3 a {
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 body .mag-head {
