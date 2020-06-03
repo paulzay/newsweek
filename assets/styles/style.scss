@@ -63,6 +63,30 @@ body {
       }
     }
   }
+  .tp-story {
+    .ft-padd {
+      border: none !important;
+      .card-body {
+        padding: 20px 0 !important;
+        .card-title a {
+          font-size: 20px;
+          color: #000;
+          font-weight: 600;
+        }
+      }
+    }
+    .noo-pad {
+      border: none !important;
+      padding: 20px 0;
+      margin-right: 10px;
+      a {
+        color: #999;
+      }
+      img {
+        width: 95%;
+      }
+    }
+  }
   .d-flex {
     background-color: $white;
     font-size: 1.1em;

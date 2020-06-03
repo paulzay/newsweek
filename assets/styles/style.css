@@ -53,6 +53,34 @@ body .ft-stories .ft-pad .card-body p {
   font-size: 15px;
 }
 
+body .tp-story .ft-padd {
+  border: none !important;
+}
+
+body .tp-story .ft-padd .card-body {
+  padding: 20px 0 !important;
+}
+
+body .tp-story .ft-padd .card-body .card-title a {
+  font-size: 20px;
+  color: #000;
+  font-weight: 600;
+}
+
+body .tp-story .noo-pad {
+  border: none !important;
+  padding: 20px 0;
+  margin-right: 10px;
+}
+
+body .tp-story .noo-pad a {
+  color: #999;
+}
+
+body .tp-story .noo-pad img {
+  width: 95%;
+}
+
 body .d-flex {
   background-color: #fff;
   font-size: 1.1em;
