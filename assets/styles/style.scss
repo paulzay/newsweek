@@ -205,7 +205,20 @@ body {
       }
     }
   }
-
+  .editor {
+    margin: 30px 20px;
+    .no-pad {
+      border: none !important;
+      .card-body {
+        padding: 20px 0 !important;
+        h3 a {
+          color: #333;
+          font-size: 24px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
   .us {
     margin: 30px 20px;
     border-top: 1px solid #ccc;

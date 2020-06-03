@@ -197,6 +197,24 @@ body .pre-foot .news-letter .sgnupp form .form-text {
   height: 35px;
 }
 
+body .editor {
+  margin: 30px 20px;
+}
+
+body .editor .no-pad {
+  border: none !important;
+}
+
+body .editor .no-pad .card-body {
+  padding: 20px 0 !important;
+}
+
+body .editor .no-pad .card-body h3 a {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
 body .us {
   margin: 30px 20px;
   border-top: 1px solid #ccc;
