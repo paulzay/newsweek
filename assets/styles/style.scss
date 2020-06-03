@@ -5,12 +5,6 @@
 $font-stack: "Roboto", sans-serif;
 $white: #fff;
 $red: #f72210;
-$BR: hsl(12, 88%, 59%);
-$D-B: hsl(228, 39%, 23%);
-$D-G-B: hsl(227, 12%, 61%);
-$V-D: hsl(233, 12%, 13%);
-$V-P-R: hsl(13, 100%, 96%);
-$V-L-G: hsl(0, 0%, 98%);
 
 //STYLES
 * a {
@@ -47,27 +41,34 @@ body {
       background-color: yellow;
     }
   }
+
   .ft-stories {
     .ft-pad {
       border: none !important;
+
       .card-body {
         padding: 20px 0 !important;
+
         h3 a {
           font-size: 24px;
           color: #000;
           font-weight: bold;
         }
+
         p {
           font-size: 15px;
         }
       }
     }
   }
+
   .tp-story {
     .ft-padd {
       border: none !important;
+
       .card-body {
         padding: 20px 0 !important;
+
         .card-title a {
           font-size: 20px;
           color: #000;
@@ -75,18 +76,42 @@ body {
         }
       }
     }
+
     .noo-pad {
       border: none !important;
       padding: 20px 0;
       margin-right: 10px;
+
       a {
         color: #999;
       }
+
       img {
         width: 95%;
       }
     }
+
+    .more-stories {
+      .st-padd {
+        border: none;
+        border-top: 1px solid rgb(165, 164, 164);
+        padding: 10px 0 !important;
+        img {
+          float: left;
+          margin-right: 20px;
+        }
+        h4 a {
+          font-size: 16px;
+          color: #000;
+        }
+        p {
+          font-weight: 300;
+          font-size: 15px;
+        }
+      }
+    }
   }
+
   .d-flex {
     background-color: $white;
     font-size: 1.1em;
@@ -149,19 +174,24 @@ body {
 
   .magazine {
     margin: 30px 20px;
+
     .feats a {
       color: #333;
       font-size: 20px;
       text-align: center;
     }
+
     .ft-pad {
       border: none !important;
+
       .card-body {
         padding: 10px 0 !important;
+
         .cat span:nth-child(1) {
           background-color: $red;
           color: white;
         }
+
         h3 a {
           color: #333;
           font-size: 20px;
@@ -170,9 +200,11 @@ body {
       }
     }
   }
+
   .mag-head {
     text-align: center;
   }
+
   .arts {
     display: flex;
     align-items: flex-end;
@@ -262,12 +294,16 @@ body {
       }
     }
   }
+
   .editor {
     margin: 30px 20px;
+
     .no-pad {
       border: none !important;
+
       .card-body {
         padding: 20px 0 !important;
+
         h3 a {
           color: #333;
           font-size: 24px;
@@ -276,20 +312,24 @@ body {
       }
     }
   }
+
   .us {
     margin: 30px 20px;
     border-top: 1px solid #ccc;
+
     h2 {
       a {
         color: $red;
         font-size: 22px;
       }
     }
+
     .topic {
       a {
         color: #333;
         font-size: 20px;
         font-weight: 400;
+
         &:hover {
           color: $red;
           text-decoration: none;
@@ -300,12 +340,15 @@ body {
     .no-marg {
       border: none !important;
       padding: 0 0 10px 0 !important;
+
       img {
         margin-right: 20px;
       }
+
       a {
         color: #333;
         font-weight: 600;
+
         &:hover {
           color: $red;
           text-decoration: none;
