@@ -47,7 +47,22 @@ body {
       background-color: yellow;
     }
   }
-
+  .ft-stories {
+    .ft-pad {
+      border: none !important;
+      .card-body {
+        padding: 20px 0 !important;
+        h3 a {
+          font-size: 24px;
+          color: #000;
+          font-weight: bold;
+        }
+        p {
+          font-size: 15px;
+        }
+      }
+    }
+  }
   .d-flex {
     background-color: $white;
     font-size: 1.1em;

@@ -35,6 +35,24 @@ body header .btn-yellow {
   background-color: yellow;
 }
 
+body .ft-stories .ft-pad {
+  border: none !important;
+}
+
+body .ft-stories .ft-pad .card-body {
+  padding: 20px 0 !important;
+}
+
+body .ft-stories .ft-pad .card-body h3 a {
+  font-size: 24px;
+  color: #000;
+  font-weight: bold;
+}
+
+body .ft-stories .ft-pad .card-body p {
+  font-size: 15px;
+}
+
 body .d-flex {
   background-color: #fff;
   font-size: 1.1em;
