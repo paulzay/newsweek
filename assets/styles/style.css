@@ -112,16 +112,89 @@ body .arts {
           align-items: flex-end;
 }
 
-body .sub {
-  outline: 1px solid red;
+body .pre-foot {
+  margin: 40px 15px;
+}
+
+body .pre-foot .card-body h3 {
+  color: #000;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+body .pre-foot .card-body p {
+  margin-top: 15px;
+  font-weight: 300;
+  line-height: 1.2em;
+  font-size: 16px;
+}
+
+body .pre-foot .card-body button {
+  background-color: #f72210;
+  border: none;
+  height: 40px;
+  width: 150px;
+  color: white;
+  border-radius: 4px;
+}
+
+body .pre-foot .sub {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 30px;
+  padding: 30px;
+  background-color: #f4f5f6;
 }
 
-body .sub img {
-  width: 30%;
+body .pre-foot .sub img {
+  width: 170px;
+  height: 228px;
+}
+
+body .pre-foot .news-letter {
+  background-color: #f4f5f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .pre-foot .news-letter img {
+  width: 48%;
+}
+
+body .pre-foot .news-letter .sgnupp {
+  background-color: #fff;
+  padding: 30px 20px;
+}
+
+body .pre-foot .news-letter .sgnupp h3 {
+  color: #000;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+body .pre-foot .news-letter .sgnupp p {
+  margin-top: 15px;
+  font-weight: 300;
+  line-height: 1.2em;
+  font-size: 14px;
+}
+
+body .pre-foot .news-letter .sgnupp form .sub-mit {
+  background-color: #f72210;
+  color: #fff;
+  border: none;
+  margin-top: 15px;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+}
+
+body .pre-foot .news-letter .sgnupp form .form-text {
+  font-weight: 300;
+  padding-left: 10px;
+  border: 1px solid #e0e1e1;
+  height: 35px;
 }
 
 footer .footop {
