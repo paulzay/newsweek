@@ -112,6 +112,50 @@ body {
     }
   }
 
+  .debate {
+    .dtop {
+      border-top: 3px solid $red;
+      border-bottom: 3px solid blue;
+      margin-bottom: 20px;
+    }
+    .d8 {
+      border-top: none !important;
+    }
+    .db8 {
+      border: none;
+      border-top: 1px solid rgb(150, 147, 147);
+      img {
+        float: left;
+        margin-right: 20px;
+      }
+      h3 {
+        a {
+          color: #333;
+        }
+      }
+      p {
+        color: #555;
+        font-size: 14px;
+      }
+    }
+    .db88 {
+      border: none;
+      border-top: 1px solid #555;
+      img {
+        float: right;
+      }
+      h3 {
+        a {
+          color: #333;
+        }
+      }
+      p {
+        color: #555;
+        font-size: 14px;
+      }
+    }
+  }
+
   .d-flex {
     background-color: $white;
     font-size: 1.1em;

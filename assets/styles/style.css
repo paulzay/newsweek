@@ -102,6 +102,53 @@ body .tp-story .more-stories .st-padd p {
   font-size: 15px;
 }
 
+body .debate .dtop {
+  border-top: 3px solid #f72210;
+  border-bottom: 3px solid blue;
+  margin-bottom: 20px;
+}
+
+body .debate .d8 {
+  border-top: none !important;
+}
+
+body .debate .db8 {
+  border: none;
+  border-top: 1px solid #969393;
+}
+
+body .debate .db8 img {
+  float: left;
+  margin-right: 20px;
+}
+
+body .debate .db8 h3 a {
+  color: #333;
+}
+
+body .debate .db8 p {
+  color: #555;
+  font-size: 14px;
+}
+
+body .debate .db88 {
+  border: none;
+  border-top: 1px solid #555;
+}
+
+body .debate .db88 img {
+  float: right;
+}
+
+body .debate .db88 h3 a {
+  color: #333;
+}
+
+body .debate .db88 p {
+  color: #555;
+  font-size: 14px;
+}
+
 body .d-flex {
   background-color: #fff;
   font-size: 1.1em;
