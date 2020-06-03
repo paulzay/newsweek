@@ -2,8 +2,7 @@
 
 //VARIABLES
 
-$font-stack: "Roboto",
-sans-serif;
+$font-stack: "Roboto", sans-serif;
 $white: #fff;
 $red: #f72210;
 $BR: hsl(12, 88%, 59%);
@@ -176,7 +175,6 @@ body {
           color: #000;
           font-weight: 600;
           font-size: 22px;
-
         }
 
         p {
@@ -187,7 +185,6 @@ body {
         }
 
         form {
-
           .sub-mit {
             background-color: $red;
             color: $white;
@@ -208,8 +205,44 @@ body {
       }
     }
   }
-}
 
+  .us {
+    margin: 30px 20px;
+    border-top: 1px solid #ccc;
+    h2 {
+      a {
+        color: $red;
+        font-size: 22px;
+      }
+    }
+    .topic {
+      a {
+        color: #333;
+        font-size: 20px;
+        font-weight: 400;
+        &:hover {
+          color: $red;
+          text-decoration: none;
+        }
+      }
+    }
+    .no-marg {
+      border: none !important;
+      padding: 0 0 10px 0 !important;
+      img {
+        margin-right: 20px;
+      }
+      a {
+        color: #333;
+        font-weight: 600;
+        &:hover {
+          color: $red;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
 
 footer {
   margin: 20px;
@@ -217,7 +250,6 @@ footer {
   .footop {
     display: flex;
     justify-content: space-between;
-
 
     .ft-logo svg {
       width: 236px;
@@ -234,11 +266,9 @@ footer {
   }
 
   .footom {
-
     h3 {
       color: #666;
       margin-top: 7px;
-
     }
 
     a {

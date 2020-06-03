@@ -197,6 +197,46 @@ body .pre-foot .news-letter .sgnupp form .form-text {
   height: 35px;
 }
 
+body .us {
+  margin: 30px 20px;
+  border-top: 1px solid #ccc;
+}
+
+body .us h2 a {
+  color: #f72210;
+  font-size: 22px;
+}
+
+body .us .topic a {
+  color: #333;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+body .us .topic a:hover {
+  color: #f72210;
+  text-decoration: none;
+}
+
+body .us .no-marg {
+  border: none !important;
+  padding: 0 0 10px 0 !important;
+}
+
+body .us .no-marg img {
+  margin-right: 20px;
+}
+
+body .us .no-marg a {
+  color: #333;
+  font-weight: 600;
+}
+
+body .us .no-marg a:hover {
+  color: #f72210;
+  text-decoration: none;
+}
+
 footer {
   margin: 20px;
 }
