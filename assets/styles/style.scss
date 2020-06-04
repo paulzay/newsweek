@@ -68,7 +68,28 @@ body {
         font-weight: 100;
       }
     }
+
     @media (max-width: 991px) {
+      height: 60px;
+      padding: 10px 20px 20px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+
+      svg {
+        width: 40%;
+      }
+
+      .date {
+        display: none;
+      }
+
+      .mynav {
+        display: none;
+      }
+    }
+
+    @media (max-width: 490px) {
       height: 60px;
       padding: 10px 20px 20px 20px;
       position: sticky;
@@ -393,6 +414,13 @@ body {
             height: 35px;
           }
         }
+      }
+    }
+
+    @media (max-width: 767px) {
+      .sub {
+        display: flex;
+        flex-direction: column;
       }
     }
   }
