@@ -1,1180 +1,1532 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newsweek</title>
+    <link rel="icon" href="./assets/img/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Newsweek</title>
-  <link rel="icon" href="./assets/img/favicon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,900;1,400&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="./assets/styles/style.css" />
-</head>
-
-<body>
-  <header>
-    <div class="row align-items-end">
-      <div class="col date">
-        <p><span>Nairobi Kenya</span></p>
-        <p><span id="datetime"></span></p>
-      </div>
-      <div class="col img-logo">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px" y="0px" viewBox="0 0 395.6 60" style="enable-background: new 0 0 395.6 60;" xml:space="preserve">
-          <g>
-            <path class="st0"
-              d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7">
-            </path>
-          </g>
-        </svg>
-      </div>
-      <div class="col text-right justify-items-end link-container">
-        <a class="login" href="#">LOGIN</a>
-        <button type="button" class="btn btn-yellow">SUBSCRIBE</button>
-      </div>
-    </div>
-
-    <div class="mynav">
-      <ul class="nav col-12 col-md-12">
-        <li class="nav-item">
-          <a class="nav-link" href="#">U.S.</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">World</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Business</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Tech & Science</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Culture</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Newsgeek</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Sports</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Health</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">The Debate</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Vantage</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Weather</a>
-        </li>
-
-        <li class="nav-item">
-          <span>Search</span>
-          <i class="fa fa-search"></i>
-        </li>
-      </ul>
-    </div>
-  </header>
-  <main>
-    <div class="row categories">
-      <div class="col-12 col-md-5 col-lg order-2 order-md-1 ft-stories">
-        <h3>FEATURED STORIES</h3>
-        <div class="card ft-pad">
-          <img class="card-img-top"
-            src="https://d.newsweek.com/en/full/1595200/fea-biden-banner.webp?w=397&h=265&l=48&t=36&q=90&f=8e604cb46b95f745e47a045e48d00102"
-            alt="" />
-          <div class="card-body">
-            <h3>
-              <a class="ftplink" href="#">Biden, the Moderate, Plans the Most Radical Economic Overhaul
-                Since FDR</a>
-            </h3>
-            <p>
-              To revive the economy, Joe Biden wants to build his own New Deal
-              with an array of proposals to strengthen the social safety net
-              and revive prosperity. The big question: Is he up to the
-              challenge?
-            </p>
-          </div>
+  <body>
+    <header>
+      <div class="row align-items-end">
+        <div class="col date">
+          <p><span>Nairobi Kenya</span></p>
+          <p><span id="datetime"></span></p>
         </div>
-
-        <div class="card ft-pad">
-          <img class="card-img-top"
-            src="https://d.newsweek.com/en/full/1595523/mural.webp?w=397&h=265&q=90&f=e60d6521dba91e4d8231c8c969af8a7d"
-            alt="" />
-          <div class="card-body">
-            <h3 class="card-title">
-              <a class="ftplink" href="#">George Floyd's Brother Slams Violence Taking Place at
-                Protests in His Name</a>
-            </h3>
-            <p class="card-text">
-              Terrence Floyd said he is outraged over the death of his
-              brother, but urged protesters to "channel your anger elsewhere."
-            </p>
-          </div>
+        <div class="col img-logo">
+          <svg
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 395.6 60"
+            style="enable-background: new 0 0 395.6 60;"
+            xml:space="preserve"
+          >
+            <g>
+              <path
+                class="st0"
+                d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7"
+              ></path>
+            </g>
+          </svg>
         </div>
-
-        <div class="card ft-pad">
-          <img class="card-img-top"
-            src="https://d.newsweek.com/en/full/1595446/gwen-carr-george-floyd.webp?w=397&h=265&q=90&f=20bae7955bac397dc2d49f391f0a5b6e"
-            alt="" />
-          <div class="card-body">
-            <h3 class="card-title">
-              <a class="ftplink" href="#">I'm Eric Garner's Mom. Four Cops Must Be Convicted in George
-                Floyd's Death</a>
-            </h3>
-            <p class="card-text">
-              "I can't breathe." Even though I had seen and heard it before,
-              what happened in Minneapolis was hard to even fathom.
-            </p>
-          </div>
-        </div>
-
-        <div class="card ft-pad">
-          <img class="card-img-top"
-            src="https://d.newsweek.com/en/full/1595616/former-president-barack-obama.webp?w=397&h=265&q=90&f=041ba3abe02ca9a10ff5067fbdd305ff"
-            alt="" />
-          <div class="card-body">
-            <h3 class="card-title">
-              <a class="ftplink" href="#">Obama Says Minority of George Floyd Protesters Are
-                'Detracting' From Cause</a>
-            </h3>
-            <p class="card-text">
-              The former president said violent demonstrators were putting
-              innocent people at risk after a sixth night of unrest.
-            </p>
-          </div>
-        </div>
-        <div class="card ft-pad">
-          <img class="card-img-top"
-            src="https://d.newsweek.com/en/full/1595660/george-floyd-protest-boston-ma.webp?w=397&h=265&q=90&f=149bc315a224b0943d7b3bcf0d534254"
-            alt="" />
-          <div class="card-body">
-            <h3 class="card-title">
-              <a class="ftplink" href="#">Not All Biden VP Candidates Are Echoing His Message on
-                Avoiding Violence</a>
-            </h3>
-            <p class="card-text">
-              The act of protesting should never be allowed to overshadow the
-              reason we protest. It should not drive people away from the just
-              cause that protest is meant to advance," Biden said.
-            </p>
-          </div>
+        <div class="col text-right justify-items-end link-container">
+          <a class="login" href="#">LOGIN</a>
+          <button type="button" class="btn btn-yellow">SUBSCRIBE</button>
         </div>
       </div>
-      <div class="col-12 col-md-7 col-lg-5 order-1 order-md-2 tp-story">
-        <h3>TOP STORY</h3>
-        <div class="card ft-padd">
-          <img class="card-img-top"
-            src="https://d.newsweek.com/en/full/1595513/president-donald-trump-after-spacex-launch.webp?w=591&h=364&f=bfdd8106b76b950d6ebe8709850f77f1 "
-            alt="trumpy" />
-          <div class="card-body">
-            <h3 class="card-title">
-              <a class="ctext" href="#">Trump Tells Governors to 'Dominate' Protestors, Says 'They're
-                Terrorists'</a>
-            </h3>
-            <p class="card-text">
-              In a call with the nation's governors, President Donald Trump
-              called the protestors who have been demonstrating after George
-              Floyd's death "terrorists.
-            </p>
-          </div>
-        </div>
-        <h3>HEROES OF THE PANDEMIC</h3>
-        <ul class="list-group list-group-horizontal">
-          <li class="list-group-item noo-pad">
-            <img
-              src="https://d.newsweek.com/en/full/1595569/atlanta-georgia-tear-gas-police-may-2020.webp?w=95&h=95&f=52e7fbb853b22a122b0d3d140531cb76"
-              alt="protest" />
-            <a class="hlink" href="#">Atlanta Police Attempt to Disperse Protesters With Tear Gas
-              Backfires</a>
-          </li>
-          <li class="list-group-item noo-pad">
-            <img
-              src="https://d.newsweek.com/en/full/1595569/atlanta-georgia-tear-gas-police-may-2020.webp?w=95&h=95&f=52e7fbb853b22a122b0d3d140531cb76"
-              alt="protest" />
-            <a class="hlink" href="#">Atlanta Police Attempt to Disperse Protesters With Tear Gas
-              Backfires</a>
-          </li>
-          <li class="list-group-item noo-pad">
-            <img
-              src="https://d.newsweek.com/en/full/1595569/atlanta-georgia-tear-gas-police-may-2020.webp?w=95&h=95&f=52e7fbb853b22a122b0d3d140531cb76"
-              alt="protest" />
-            <a class="hlink" href="#">Atlanta Police Attempt to Disperse Protesters With Tear Gas
-              Backfires</a>
-          </li>
-        </ul>
-        <h3>CULTURE AND TRAVEL</h3>
-        <ul class="list-group list-group-horizontal">
-          <li class="list-group-item noo-pad">
-            <img
-              src="https://d.newsweek.com/en/full/1595569/atlanta-georgia-tear-gas-police-may-2020.webp?w=95&h=95&f=52e7fbb853b22a122b0d3d140531cb76"
-              alt="protest" />
-            <a class="hlink" href="#">Atlanta Police Attempt to Disperse Protesters With Tear Gas
-              Backfires</a>
-          </li>
-          <li class="list-group-item noo-pad">
-            <img
-              src="https://d.newsweek.com/en/full/1595569/atlanta-georgia-tear-gas-police-may-2020.webp?w=95&h=95&f=52e7fbb853b22a122b0d3d140531cb76"
-              alt="protest" />
-            <a class="hlink" href="#">Atlanta Police Attempt to Disperse Protesters With Tear Gas
-              Backfires</a>
-          </li>
-          <li class="list-group-item noo-pad">
-            <img
-              src="https://d.newsweek.com/en/full/1595569/atlanta-georgia-tear-gas-police-may-2020.webp?w=95&h=95&f=52e7fbb853b22a122b0d3d140531cb76"
-              alt="protest" />
-            <a class="hlink" href="#">Atlanta Police Attempt to Disperse Protesters With Tear Gas
-              Backfires</a>
-          </li>
-        </ul>
-        <h3>MORE STORIES</h3>
-        <ul class="list-group more-stories">
-          <li class="list-group-item st-padd">
-            <img src="https://d.newsweek.com/en/full/1591982/f-35a.webp?w=95&h=95&f=c74f54f9b88460391591c8016e1a0614"
-              alt="jets" class="stimg" />
 
-            <h4><a class="mrlink" href="#">Shooting at Grand Forks Air Force Base Leaves 2 Active Duty
-                Members Dead</a></h4>
-            <p>
-              United States Air Force officials say an early Monday morning
-              shooting incident has left two members of the 319th
-              Reconnaissance Wing dead
-            </p>
-
-          </li>
-          <li class="list-group-item st-padd">
-            <img src="https://d.newsweek.com/en/full/1591982/f-35a.webp?w=95&h=95&f=c74f54f9b88460391591c8016e1a0614"
-              alt="jets" class="stimg" />
-            <h4><a class="mrlink" href="#">Shooting at Grand Forks Air Force Base Leaves 2 Active Duty
-                Members Dead</a></h4>
-            <p>
-              United States Air Force officials say an early Monday morning
-              shooting incident has left two members of the 319th
-              Reconnaissance Wing dead
-            </p>
-          </li>
-          <li class="list-group-item st-padd">
-            <img
-              src="https://d.newsweek.com/en/full/1595513/president-donald-trump-after-spacex-launch.webp?w=95&h=95&f=50748640a9a5e47891e72299e8e060e3"
-              alt="trumpy" class="stimg"/>
-            <h4><a class="mrlink" href="#">NYC Health Officials Mandate Vaccines in Brooklyn</a></h4>
-            <p>
-              There have been nearly 300 cases of measles in one neighborhood
-              since the outbreak began.
-            </p>
+      <div class="mynav">
+        <ul class="nav col-12 col-md-12">
+          <li class="nav-item">
+            <a class="nav-link" href="#">U.S.</a>
           </li>
 
-          <li class="list-group-item st-padd">
-            <img
-              src="https://d.newsweek.com/en/full/1595569/atlanta-georgia-tear-gas-police-may-2020.webp?w=95&h=95&f=52e7fbb853b22a122b0d3d140531cb76"
-              alt="protest" class="stimg" />
-            <h4><a class="mrlink" href="#">Atlanta Police Attempt to Disperse Protesters With Tear Gas
-                Backfires</a></h4>
-            <p>
-              Up to 3,000 National Guard members have been authorized by
-              Georgia Gov. Brian Kemp to provide assistance amid the ongoing
-              protests.
-            </p>
+          <li class="nav-item">
+            <a class="nav-link" href="#">World</a>
           </li>
-          <li class="list-group-item st-padd">
-            <img
-              src="https://d.newsweek.com/en/full/1595565/protesters-george-floyd.webp?w=95&h=95&f=ec5052641f924534adf923ac05fef508"
-              alt="protest" class="stimg"/>
-            <h4><a class="mrlink" href="#">Curfews Imposed in 42 Cities in 24 States as Protesters Clash
-                With Police</a></h4>
-            <p>
-              Protesters took to the streets demanding justice for George
-              Floyd, who died in police custody in Minneapolis a week ago.
-            </p>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Business</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tech & Science</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Culture</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Newsgeek</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sports</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Health</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">The Debate</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Vantage</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Weather</a>
+          </li>
+
+          <li class="nav-item">
+            <span>Search</span>
+            <i class="fa fa-search"></i>
           </li>
         </ul>
       </div>
+    </header>
+    <main>
+      <div class="row categories">
+        <div class="col-12 col-md-5 col-lg order-2 order-md-1 ft-stories">
+          <h3>FEATURED STORIES</h3>
+          <div class="card ft-pad">
+            <img
+              class="card-img-top"
+              src="https://d.newsweek.com/en/full/1595200/fea-biden-banner.webp?w=397&h=265&l=48&t=36&q=90&f=8e604cb46b95f745e47a045e48d00102"
+              alt=""
+            />
+            <div class="card-body">
+              <h3>
+                <a class="ftplink" href="#"
+                  >Biden, the Moderate, Plans the Most Radical Economic Overhaul
+                  Since FDR</a
+                >
+              </h3>
+              <p>
+                To revive the economy, Joe Biden wants to build his own New Deal
+                with an array of proposals to strengthen the social safety net
+                and revive prosperity. The big question: Is he up to the
+                challenge?
+              </p>
+            </div>
+          </div>
 
-      <div class="col-12 col-lg order-3 order-md-3">
-        <div class="debate">
-          <h3>THE DEBATE</h3>
-          <ul class="list-group dtop">
-            <li class="list-group-item db8 d8">
+          <div class="card ft-pad">
+            <img
+              class="card-img-top"
+              src="https://d.newsweek.com/en/full/1595523/mural.webp?w=397&h=265&q=90&f=e60d6521dba91e4d8231c8c969af8a7d"
+              alt=""
+            />
+            <div class="card-body">
+              <h3 class="card-title">
+                <a class="ftplink" href="#"
+                  >George Floyd's Brother Slams Violence Taking Place at
+                  Protests in His Name</a
+                >
+              </h3>
+              <p class="card-text">
+                Terrence Floyd said he is outraged over the death of his
+                brother, but urged protesters to "channel your anger elsewhere."
+              </p>
+            </div>
+          </div>
+
+          <div class="card ft-pad">
+            <img
+              class="card-img-top"
+              src="https://d.newsweek.com/en/full/1595446/gwen-carr-george-floyd.webp?w=397&h=265&q=90&f=20bae7955bac397dc2d49f391f0a5b6e"
+              alt=""
+            />
+            <div class="card-body">
+              <h3 class="card-title">
+                <a class="ftplink" href="#"
+                  >I'm Eric Garner's Mom. Four Cops Must Be Convicted in George
+                  Floyd's Death</a
+                >
+              </h3>
+              <p class="card-text">
+                "I can't breathe." Even though I had seen and heard it before,
+                what happened in Minneapolis was hard to even fathom.
+              </p>
+            </div>
+          </div>
+
+          <div class="card ft-pad">
+            <img
+              class="card-img-top"
+              src="https://d.newsweek.com/en/full/1595616/former-president-barack-obama.webp?w=397&h=265&q=90&f=041ba3abe02ca9a10ff5067fbdd305ff"
+              alt=""
+            />
+            <div class="card-body">
+              <h3 class="card-title">
+                <a class="ftplink" href="#"
+                  >Obama Says Minority of George Floyd Protesters Are
+                  'Detracting' From Cause</a
+                >
+              </h3>
+              <p class="card-text">
+                The former president said violent demonstrators were putting
+                innocent people at risk after a sixth night of unrest.
+              </p>
+            </div>
+          </div>
+          <div class="card ft-pad">
+            <img
+              class="card-img-top"
+              src="https://d.newsweek.com/en/full/1595660/george-floyd-protest-boston-ma.webp?w=397&h=265&q=90&f=149bc315a224b0943d7b3bcf0d534254"
+              alt=""
+            />
+            <div class="card-body">
+              <h3 class="card-title">
+                <a class="ftplink" href="#"
+                  >Not All Biden VP Candidates Are Echoing His Message on
+                  Avoiding Violence</a
+                >
+              </h3>
+              <p class="card-text">
+                The act of protesting should never be allowed to overshadow the
+                reason we protest. It should not drive people away from the just
+                cause that protest is meant to advance," Biden said.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-7 col-lg-5 order-1 order-md-2 tp-story">
+          <h3>TOP STORY</h3>
+          <div class="card ft-padd">
+            <img
+              class="card-img-top"
+              src="https://d.newsweek.com/en/full/1595513/president-donald-trump-after-spacex-launch.webp?w=591&h=364&f=bfdd8106b76b950d6ebe8709850f77f1 "
+              alt="trumpy"
+            />
+            <div class="card-body">
+              <h3 class="card-title">
+                <a class="ctext" href="#"
+                  >Trump Tells Governors to 'Dominate' Protestors, Says 'They're
+                  Terrorists'</a
+                >
+              </h3>
+              <p class="card-text">
+                In a call with the nation's governors, President Donald Trump
+                called the protestors who have been demonstrating after George
+                Floyd's death "terrorists.
+              </p>
+            </div>
+          </div>
+          <h3>HEROES OF THE PANDEMIC</h3>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item noo-pad">
               <img
-                src="https://d.newsweek.com/en/full/1595427/lanaya-irvin.webp?w=63&h=63&f=2cd8eb83509e4d2727dbb36d86b7993e"
-                alt="pp" class="dbimg" />
-              <h3><a class="dblink" href="#">Breaking the Silence at Work</a></h3>
-              <p class="author">BY LANAYA IRVIN</p>
+                src="https://d.newsweek.com/en/full/1595569/atlanta-georgia-tear-gas-police-may-2020.webp?w=95&h=95&f=52e7fbb853b22a122b0d3d140531cb76"
+                alt="protest"
+              />
+              <a class="hlink" href="#"
+                >Atlanta Police Attempt to Disperse Protesters With Tear Gas
+                Backfires</a
+              >
             </li>
-            <li class="list-group-item db88">
+            <li class="list-group-item noo-pad">
               <img
-                src="https://d.newsweek.com/en/full/1595427/lanaya-irvin.webp?w=63&h=63&f=2cd8eb83509e4d2727dbb36d86b7993e"
-                alt="pp" class="dbimg" />
-              <h3><a class="dblink" href="#">Breaking the Silence at Work</a></h3>
-              <p class="author">BY LANAYA IRVIN</p>
+                src="https://d.newsweek.com/en/full/1595569/atlanta-georgia-tear-gas-police-may-2020.webp?w=95&h=95&f=52e7fbb853b22a122b0d3d140531cb76"
+                alt="protest"
+              />
+              <a class="hlink" href="#"
+                >Atlanta Police Attempt to Disperse Protesters With Tear Gas
+                Backfires</a
+              >
+            </li>
+            <li class="list-group-item noo-pad">
+              <img
+                src="https://d.newsweek.com/en/full/1595569/atlanta-georgia-tear-gas-police-may-2020.webp?w=95&h=95&f=52e7fbb853b22a122b0d3d140531cb76"
+                alt="protest"
+              />
+              <a class="hlink" href="#"
+                >Atlanta Police Attempt to Disperse Protesters With Tear Gas
+                Backfires</a
+              >
+            </li>
+          </ul>
+          <h3>CULTURE AND TRAVEL</h3>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item noo-pad">
+              <img
+                src="https://d.newsweek.com/en/full/1595569/atlanta-georgia-tear-gas-police-may-2020.webp?w=95&h=95&f=52e7fbb853b22a122b0d3d140531cb76"
+                alt="protest"
+              />
+              <a class="hlink" href="#"
+                >Atlanta Police Attempt to Disperse Protesters With Tear Gas
+                Backfires</a
+              >
+            </li>
+            <li class="list-group-item noo-pad">
+              <img
+                src="https://d.newsweek.com/en/full/1595569/atlanta-georgia-tear-gas-police-may-2020.webp?w=95&h=95&f=52e7fbb853b22a122b0d3d140531cb76"
+                alt="protest"
+              />
+              <a class="hlink" href="#"
+                >Atlanta Police Attempt to Disperse Protesters With Tear Gas
+                Backfires</a
+              >
+            </li>
+            <li class="list-group-item noo-pad">
+              <img
+                src="https://d.newsweek.com/en/full/1595569/atlanta-georgia-tear-gas-police-may-2020.webp?w=95&h=95&f=52e7fbb853b22a122b0d3d140531cb76"
+                alt="protest"
+              />
+              <a class="hlink" href="#"
+                >Atlanta Police Attempt to Disperse Protesters With Tear Gas
+                Backfires</a
+              >
+            </li>
+          </ul>
+          <h3>MORE STORIES</h3>
+          <ul class="list-group more-stories">
+            <li class="list-group-item st-padd">
+              <img
+                src="https://d.newsweek.com/en/full/1591982/f-35a.webp?w=95&h=95&f=c74f54f9b88460391591c8016e1a0614"
+                alt="jets"
+                class="stimg"
+              />
 
+              <h4>
+                <a class="mrlink" href="#"
+                  >Shooting at Grand Forks Air Force Base Leaves 2 Active Duty
+                  Members Dead</a
+                >
+              </h4>
+              <p>
+                United States Air Force officials say an early Monday morning
+                shooting incident has left two members of the 319th
+                Reconnaissance Wing dead
+              </p>
+            </li>
+            <li class="list-group-item st-padd">
+              <img
+                src="https://d.newsweek.com/en/full/1591982/f-35a.webp?w=95&h=95&f=c74f54f9b88460391591c8016e1a0614"
+                alt="jets"
+                class="stimg"
+              />
+              <h4>
+                <a class="mrlink" href="#"
+                  >Shooting at Grand Forks Air Force Base Leaves 2 Active Duty
+                  Members Dead</a
+                >
+              </h4>
+              <p>
+                United States Air Force officials say an early Monday morning
+                shooting incident has left two members of the 319th
+                Reconnaissance Wing dead
+              </p>
+            </li>
+            <li class="list-group-item st-padd">
+              <img
+                src="https://d.newsweek.com/en/full/1595513/president-donald-trump-after-spacex-launch.webp?w=95&h=95&f=50748640a9a5e47891e72299e8e060e3"
+                alt="trumpy"
+                class="stimg"
+              />
+              <h4>
+                <a class="mrlink" href="#"
+                  >NYC Health Officials Mandate Vaccines in Brooklyn</a
+                >
+              </h4>
+              <p>
+                There have been nearly 300 cases of measles in one neighborhood
+                since the outbreak began.
+              </p>
+            </li>
+
+            <li class="list-group-item st-padd">
+              <img
+                src="https://d.newsweek.com/en/full/1595569/atlanta-georgia-tear-gas-police-may-2020.webp?w=95&h=95&f=52e7fbb853b22a122b0d3d140531cb76"
+                alt="protest"
+                class="stimg"
+              />
+              <h4>
+                <a class="mrlink" href="#"
+                  >Atlanta Police Attempt to Disperse Protesters With Tear Gas
+                  Backfires</a
+                >
+              </h4>
+              <p>
+                Up to 3,000 National Guard members have been authorized by
+                Georgia Gov. Brian Kemp to provide assistance amid the ongoing
+                protests.
+              </p>
+            </li>
+            <li class="list-group-item st-padd">
+              <img
+                src="https://d.newsweek.com/en/full/1595565/protesters-george-floyd.webp?w=95&h=95&f=ec5052641f924534adf923ac05fef508"
+                alt="protest"
+                class="stimg"
+              />
+              <h4>
+                <a class="mrlink" href="#"
+                  >Curfews Imposed in 42 Cities in 24 States as Protesters Clash
+                  With Police</a
+                >
+              </h4>
+              <p>
+                Protesters took to the streets demanding justice for George
+                Floyd, who died in police custody in Minneapolis a week ago.
+              </p>
             </li>
           </ul>
         </div>
-        <div class="debate">
-          <h3>OPINION</h3>
-          <ul class="list-group">
-            <li class="list-group-item db8 d8">
-              <img
-                src="https://d.newsweek.com/en/full/1595427/lanaya-irvin.webp?w=63&h=63&f=2cd8eb83509e4d2727dbb36d86b7993e"
-                alt="pp" class="dbimg" />
-              <h3><a class="dblink" href="#">Breaking the Silence at Work</a></h3>
-              <p class="author">BY LANAYA IRVIN</p>
-            </li>
 
-            <li class="list-group-item db8">
-              <img
-                src="https://d.newsweek.com/en/full/83499/newt-gingrich.webp?w=63&h=63&l=48&t=55&f=d8b4f8dfaad8a5f0f71bffcc6c0d6a77"
-                alt="pp" class="dbimg" />
-              <h3><a class="dblink" href="#">The War Against America: Questions and Suggestions</a></h3>
-              <p class="author">BY NEWT GINGRICH</p>
-            </li>
-
-            <li class="list-group-item db8">
-              <img
-                src="https://d.newsweek.com/en/full/83015/david-miliband.webp?w=63&h=63&f=103377059a2a80fbfa249e4a61c40464"
-                alt="PP" class="dbimg"/>
-              <h3><a class="dblink" href="#">Closing Border Won't Flatten The Curve—If Anything, It Makes
-                  Things Worse</a></h3>
-              <p class="author">BY DAVID MILIBAND</p>
-            </li>
-
-            <li class="list-group-item db8">
-              <img
-                src="https://d.newsweek.com/en/full/1595701/fred-guttenberg-joel-rubin.webp?w=63&h=63&f=0cf056bc53e67aa0452e64bb8b18605c"
-                alt="PP" class="dbimg"/>
-              <h3><a class="dblink" href="#">Democratic Unity Will Send Biden to the White House</a></h3>
-              <p class="author">BY FRED GUTTENBERG AND JOEL RUBIN</p>
-            </li>
-
-            <li class="list-group-item db8">
-              <img
-                src="https://d.newsweek.com/en/full/1506965/charlie-kirk.webp?w=63&h=63&f=dadcbab6cd325ee70d1bfe4df5a01410"
-                alt="pp" class="dbimg" />
-              <h3><a class="dblink" href="#">Drawing the Right Conclusions From George Floyd</a></h3>
-              <p class="author">BY CHARLIE KIRK</p>
-            </li>
-
-            <li class="list-group-item db8">
-              <img
-                src="https://d.newsweek.com/en/full/1595153/sherrod-brown.webp?w=63&h=63&f=ee82a7475051444c997def4b40098b27"
-                alt="pp" class="dbimg"/>
-              <h3><a class="dblink" href="#">We Need a Recovery That Puts Workers First. And Yes, It's
-                  Urgent</a></h3>
-              <p class="author">BY SHERROD BROWN</p>
-            </li>
-          </ul>
-        </div>
-        <div class="sgnup">
-          <div class="top">
-            <img src="./assets/img/favicon.png" alt="logo" class="logoimg"/>
-            <span>START YOUR DAY WITH OUR TOP 5 ARTICLES</span>
+        <div class="col-12 col-lg order-3 order-md-3">
+          <div class="debate">
+            <h3>THE DEBATE</h3>
+            <ul class="list-group dtop">
+              <li class="list-group-item db8 d8">
+                <img
+                  src="https://d.newsweek.com/en/full/1595427/lanaya-irvin.webp?w=63&h=63&f=2cd8eb83509e4d2727dbb36d86b7993e"
+                  alt="pp"
+                  class="dbimg"
+                />
+                <h3>
+                  <a class="dblink" href="#">Breaking the Silence at Work</a>
+                </h3>
+                <p class="author">BY LANAYA IRVIN</p>
+              </li>
+              <li class="list-group-item db88">
+                <img
+                  src="https://d.newsweek.com/en/full/1595427/lanaya-irvin.webp?w=63&h=63&f=2cd8eb83509e4d2727dbb36d86b7993e"
+                  alt="pp"
+                  class="dbimg"
+                />
+                <h3>
+                  <a class="dblink" href="#">Breaking the Silence at Work</a>
+                </h3>
+                <p class="author">BY LANAYA IRVIN</p>
+              </li>
+            </ul>
           </div>
-          <form class="signup" action="POST">
-            <input type="text" placeholder="Email address" class="f-text" />
-            <input type="submit" value="FREE SIGNUP" class="submit" />
-          </form>
+          <div class="debate">
+            <h3>OPINION</h3>
+            <ul class="list-group">
+              <li class="list-group-item db8 d8">
+                <img
+                  src="https://d.newsweek.com/en/full/1595427/lanaya-irvin.webp?w=63&h=63&f=2cd8eb83509e4d2727dbb36d86b7993e"
+                  alt="pp"
+                  class="dbimg"
+                />
+                <h3>
+                  <a class="dblink" href="#">Breaking the Silence at Work</a>
+                </h3>
+                <p class="author">BY LANAYA IRVIN</p>
+              </li>
+
+              <li class="list-group-item db8">
+                <img
+                  src="https://d.newsweek.com/en/full/83499/newt-gingrich.webp?w=63&h=63&l=48&t=55&f=d8b4f8dfaad8a5f0f71bffcc6c0d6a77"
+                  alt="pp"
+                  class="dbimg"
+                />
+                <h3>
+                  <a class="dblink" href="#"
+                    >The War Against America: Questions and Suggestions</a
+                  >
+                </h3>
+                <p class="author">BY NEWT GINGRICH</p>
+              </li>
+
+              <li class="list-group-item db8">
+                <img
+                  src="https://d.newsweek.com/en/full/83015/david-miliband.webp?w=63&h=63&f=103377059a2a80fbfa249e4a61c40464"
+                  alt="PP"
+                  class="dbimg"
+                />
+                <h3>
+                  <a class="dblink" href="#"
+                    >Closing Border Won't Flatten The Curve—If Anything, It
+                    Makes Things Worse</a
+                  >
+                </h3>
+                <p class="author">BY DAVID MILIBAND</p>
+              </li>
+
+              <li class="list-group-item db8">
+                <img
+                  src="https://d.newsweek.com/en/full/1595701/fred-guttenberg-joel-rubin.webp?w=63&h=63&f=0cf056bc53e67aa0452e64bb8b18605c"
+                  alt="PP"
+                  class="dbimg"
+                />
+                <h3>
+                  <a class="dblink" href="#"
+                    >Democratic Unity Will Send Biden to the White House</a
+                  >
+                </h3>
+                <p class="author">BY FRED GUTTENBERG AND JOEL RUBIN</p>
+              </li>
+
+              <li class="list-group-item db8">
+                <img
+                  src="https://d.newsweek.com/en/full/1506965/charlie-kirk.webp?w=63&h=63&f=dadcbab6cd325ee70d1bfe4df5a01410"
+                  alt="pp"
+                  class="dbimg"
+                />
+                <h3>
+                  <a class="dblink" href="#"
+                    >Drawing the Right Conclusions From George Floyd</a
+                  >
+                </h3>
+                <p class="author">BY CHARLIE KIRK</p>
+              </li>
+
+              <li class="list-group-item db8">
+                <img
+                  src="https://d.newsweek.com/en/full/1595153/sherrod-brown.webp?w=63&h=63&f=ee82a7475051444c997def4b40098b27"
+                  alt="pp"
+                  class="dbimg"
+                />
+                <h3>
+                  <a class="dblink" href="#"
+                    >We Need a Recovery That Puts Workers First. And Yes, It's
+                    Urgent</a
+                  >
+                </h3>
+                <p class="author">BY SHERROD BROWN</p>
+              </li>
+            </ul>
+          </div>
+          <div class="sgnup">
+            <div class="top">
+              <img src="./assets/img/favicon.png" alt="logo" class="logoimg" />
+              <span>START YOUR DAY WITH OUR TOP 5 ARTICLES</span>
+            </div>
+            <form class="signup" action="POST">
+              <input type="text" placeholder="Email address" class="f-text" />
+              <input type="submit" value="FREE SIGNUP" class="submit" />
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="magazine">
-      <div class="mag-head">
-        <img src="./assets/img/favicon.png" alt="logo" />
-        <span>IN THE MAGAZINE</span>
+      <div class="magazine">
+        <div class="mag-head">
+          <img src="./assets/img/favicon.png" alt="logo" />
+          <span>IN THE MAGAZINE</span>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-12 col-md-3">
+            <div class="image">
+              <a href="#"
+                ><img
+                  src="https://d.newsweek.com/en/full/1591879/may-29-june-06-2020-cover.webp?w=290&h=387&q=90&f=49f033ce11b64c8820bee410347ced3f"
+                  alt="china"
+              /></a>
+            </div>
+            <h3 class="feats"><a href="#">SEE ALL FEATURES</a></h3>
+          </div>
+
+          <div class="col-12 col-md-9 arts">
+            <div class="row">
+              <div class="card col-12 col-md-4 ft-pad">
+                <img
+                  class="card-img-top"
+                  src="https://d.newsweek.com/en/full/1590706/fea-china-banner.webp?w=466&h=311&l=50&t=50&q=90&f=2e93d189a56ba33aed2c6970c91e7b29"
+                  alt="covid"
+                />
+                <div class="card-body">
+                  <div class="cat">
+                    <span>COVER</span>
+                    <span>NEWS</span>
+                  </div>
+                  <h3>
+                    <a href="#"
+                      >America Is in a New Cold War and This Time the Communists
+                      Might Win</a
+                    >
+                  </h3>
+                </div>
+              </div>
+
+              <div class="card col-12 col-md-4 ft-pad">
+                <img
+                  class="card-img-top"
+                  src="https://d.newsweek.com/en/full/1591959/per-broadcast-01.webp?w=466&h=311&l=51&t=60&q=90&f=34753e5f2f265b8023b99371608271ec"
+                  alt="trump"
+                />
+                <div class="card-body">
+                  <div class="cat">
+                    <span>PERISCOPE</span>
+                    <span>CULTURE</span>
+                  </div>
+                  <h3>
+                    <a href="#"
+                      >Whether Trump Likes it or Not, Network News is Riding a
+                      Pandemic Ratings Boom</a
+                    >
+                  </h3>
+                </div>
+              </div>
+
+              <div class="card col-12 col-md-4 ft-pad">
+                <img
+                  class="card-img-top"
+                  src="https://d.newsweek.com/en/full/1590308/per-bezonomics-e-palette.webp?w=466&h=311&l=48&t=55&q=90&f=cab91399c3dd27dafc27183f6d7014e3"
+                  alt="amazon"
+                />
+                <div class="card-body">
+                  <div class="cat">
+                    <span>PERISCOPE</span>
+                    <span>TECH & SCIENCE</span>
+                  </div>
+                  <h3>
+                    <a href="#"
+                      >How Amazon's Bet on Autonomous Vehicles Can Help Protect
+                      Us from Viruses</a
+                    >
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="card col-12 col-md-3 ft-pad">
+            <img
+              class="card-img-top"
+              src="https://d.newsweek.com/en/full/1591374/cul-books-banner.webp?w=466&h=311&l=52&t=57&q=90&f=df553f8697afea8b2ca82570783e966e"
+              alt="IMAGE"
+            />
+            <div class="card-body">
+              <div class="cat">
+                <span>DOWNTIME</span>
+                <span>CULTURE</span>
+              </div>
+              <h3>
+                <a href="#"
+                  >The 20 Must-Read Fiction and Nonfiction Books of the
+                  Summer</a
+                >
+              </h3>
+            </div>
+          </div>
+
+          <div class="card col-12 col-md-3 ft-pad">
+            <img
+              class="card-img-top"
+              src="https://d.newsweek.com/en/full/1591269/cul-uncharted-frozentreats-banner.webp?w=466&h=311&l=48&t=49&q=90&f=10eca51c85d53a52b22ebeb83466472f"
+              alt="IMAGE"
+            />
+            <div class="card-body">
+              <div class="cat">
+                <span>DOWNTIME</span>
+                <span>CULTURE</span>
+              </div>
+              <h3>
+                <a href="#">World's Finest Frozen Treats</a>
+              </h3>
+            </div>
+          </div>
+
+          <div class="card col-12 col-md-3 ft-pad">
+            <img
+              class="card-img-top"
+              src="https://d.newsweek.com/en/full/1589884/cul-ps-ramyyoussef.webp?w=466&h=311&l=49&t=33&q=90&f=6d37f5ed478658c04e56df28dbd92ffc"
+              alt="IMAGE"
+            />
+            <div class="card-body">
+              <div class="cat">
+                <span>DOWNTIME</span>
+                <span>CULTURE</span>
+              </div>
+              <h3>
+                <a href="#"
+                  >Ramy Youssef has a bold vision for the second season of
+                  Hulu's 'Ramy'</a
+                >
+              </h3>
+            </div>
+          </div>
+
+          <div class="card col-12 col-md-3 ft-pad">
+            <img
+              class="card-img-top"
+              src="https://d.newsweek.com/en/full/1591374/cul-books-banner.webp?w=466&h=311&l=52&t=57&q=90&f=df553f8697afea8b2ca82570783e966e"
+              alt="IMAGE"
+            />
+            <div class="card-body">
+              <div class="cat">
+                <span>IN FOCUS</span>
+              </div>
+              <h3><a href="#">UNMASKED MAN</a></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="editor">
+        <div class="mag-head">
+          <img src="./assets/img/favicon.png" alt="logo" />
+          <span>EDITOR'S PICK</span>
+        </div>
+        <hr />
+
+        <div class="row pick-1">
+          <div class="card col-12 col-md-3 no-pad">
+            <img
+              class="card-img-top"
+              src="https://d.newsweek.com/en/full/1595802/jimmy-fallon-blackface.webp?w=397&h=265&f=21df038413dab736ee6952d1d3241fdd"
+              alt="IMAGE"
+            />
+            <div class="card-body">
+              <h3>
+                <a href="#"
+                  >Jimmy Fallon Says 'I'm Not a Racist' in 'Tonight Show'
+                  Blackface Apology</a
+                >
+              </h3>
+              <p>
+                The TV host followed up his Twitter apology for a 2000 SNL
+                sketch with an episode aimed at tackling racism.
+              </p>
+            </div>
+          </div>
+
+          <div class="card col-12 col-md-3 no-pad">
+            <img
+              class="card-img-top"
+              src="https://d.newsweek.com/en/full/1595806/prince-harry-meghan-markle-morocco.webp?w=397&h=265&f=d0a069d88d5097f0596a6024e44fbfee"
+              alt="image"
+            />
+            <div class="card-body">
+              <h3>
+                <a href="#"
+                  >Prince Harry and Meghan Markle Could Stop Paparazzi Drones
+                  Using Diana Law</a
+                >
+              </h3>
+              <p>
+                The Duke and Duchess of Sussex could tackle the paparazzi using
+                a Californian law introduced after Princess Diana's death, legal
+                experts tell Newsweek.
+              </p>
+            </div>
+          </div>
+
+          <div class="card col-12 col-md-3 no-pad">
+            <img
+              class="card-img-top"
+              src="https://d.newsweek.com/en/full/1595602/italy-coronavirus.webp?w=397&h=265&f=49e3890e24175cb054fd4dc7c42e8f2b"
+              alt="image"
+            />
+            <div class="card-body">
+              <h3>
+                <a href="#"
+                  >Italian Doctor's Claim Coronavirus Is Getting Weaker
+                  Questioned by Experts</a
+                >
+              </h3>
+              <p>
+                Alberto Zangrillo said viral loads from tests carried out in the
+                last 10 days were "infinitesimal" compared with samples from a
+                month ago.
+              </p>
+            </div>
+          </div>
+
+          <div class="card col-12 col-md-3 no-pad">
+            <img
+              class="card-img-top"
+              src="https://d.newsweek.com/en/full/1595462/michael-jordan-chicago-bulls.webp?w=397&h=265&f=0beeba195d4ce9b0a424ee95e89d4ec0"
+              alt="image"
+            />
+            <div class="card-body">
+              <h3>
+                <a href="#"
+                  >Michael Jordan Makes Rare Political Statement on George
+                  Floyd's Death</a
+                >
+              </h3>
+              <p>
+                Jordan urged protesters to make their voices heard at the ballot
+                booth as nationwide demonstrations raged on for a sixth
+                consecutive night.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row pick-2">
+          <div class="card col-12 col-md-3 no-pad">
+            <img
+              class="card-img-top"
+              src="https://d.newsweek.com/en/full/1595517/great-white-shark.webp?w=397&h=265&f=dc2349d3c99061d8124180107d76ec40"
+              alt="image"
+            />
+            <div class="card-body">
+              <h3>
+                <a href="#"
+                  >Great White Shark May Have Swum Into Open Ocean to Avoid
+                  Mating Attempts</a
+                >
+              </h3>
+              <p class="texts">
+                Unama'ki turned away from the waters off the eastern U.S. coast
+                and started heading deeper into the ocean at the start of April.
+              </p>
+            </div>
+          </div>
+
+          <div class="card col-12 col-md-3 no-pad">
+            <img
+              class="card-img-top"
+              src="https://d.newsweek.com/en/full/1595480/wine-alcohol-drinking-stock-getty.webp?w=397&h=265&f=680e57524ce02e74982269d206eabb27"
+              alt="image"
+            />
+            <div class="card-body">
+              <h3>
+                <a href="#"
+                  >Estrogen Levels May Make Alcohol More Rewarding to Female
+                  Mice, Study Finds</a
+                >
+              </h3>
+              <p>
+                Findings may mean women drink to excess during certain points in
+                their menstrual cycle.
+              </p>
+            </div>
+          </div>
+
+          <div class="card col-12 col-md-3 no-pad">
+            <img
+              class="card-img-top"
+              src="https://d.newsweek.com/en/full/1595821/camden-market-reopens.webp?w=397&h=265&f=481aa3c321cc96c5b90dd9a8a07872bd"
+              alt="image"
+            />
+            <div class="card-body">
+              <h3>
+                <a href="#"
+                  >Welcome to 'Mockdown' as COVID-19 Quarantine Ends in London…
+                  Sort Of</a
+                >
+              </h3>
+              <p>
+                You are allowed to go out but you should stay at home but you
+                should support local businesses but you mustn't gather in
+                groups, unless it's outside. But stay at home.
+              </p>
+            </div>
+          </div>
+
+          <div class="card col-12 col-md-3 no-pad">
+            <img
+              class="card-img-top"
+              src="https://d.newsweek.com/en/full/1595652/magic-mushrooms.webp?w=397&h=265&f=5e5f165ec902f195a9fc04caeccf376f"
+              alt="image"
+            />
+            <div class="card-body">
+              <h3>
+                <a href="#"
+                  >A new study has examined the impact of psilocybin—the active
+                  ingredient in magic mushrooms—on the brain.</a
+                >
+              </h3>
+              <p>
+                A new study has examined the impact of psilocybin—the active
+                ingredient in magic mushrooms—on the brain.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="us">
+        <h2><a class="uslink" href="#">U.S</a></h2>
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <img
+              src="https://d.newsweek.com/en/full/1595761/donald-trump-jr-cpac-conservatives-president-son.webp?w=397&h=265&f=e2b24602ff4c4f6ec98541a16ba35678"
+              alt="image"
+            />
+            <div class="topic">
+              <a class="topilink" href="#"
+                >Don Jr. Set His Sights on Big Tech Months Before His Father's
+                Twitter Feud</a
+              >
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <img
+              src="https://d.newsweek.com/en/full/1595685/tuesday-primary-elections.webp?w=397&h=265&f=72276d64dab81e9c7d61d855dd436519"
+              alt="image"
+            />
+            <div class="topic">
+              <a class="topilink" href="#"
+                >What to Watch for As These 8 States and D.C. Head to the
+                Primaries</a
+              >
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <ul class="list-group">
+              <li class="list-group-item no-marg">
+                <img
+                  src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
+                  class="float-left list-img"
+                  alt="image"
+                />
+                <a class="no-marglink" href="#"
+                  >Elizabeth Warren Says Trump's Riot Plans Places 'Our
+                  Democracy in Danger'</a
+                >
+              </li>
+              <li class="list-group-item no-marg">
+                <img
+                  src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
+                  class="float-left list-img"
+                  alt="image"
+                />
+                <a class="no-marglink" href="#"
+                  >Elizabeth Warren Says Trump's Riot Plans Places 'Our
+                  Democracy in Danger'</a
+                >
+              </li>
+
+              <li class="list-group-item no-marg">
+                <img
+                  src="https://d.newsweek.com/en/full/1595756/tropical-depression-hurricane.webp?w=95&h=95&f=c7f642a3d869633aae58374d457e3e7d"
+                  class="float-left list-img"
+                  alt="image"
+                />
+                <a class="no-marglink" href="#"
+                  >Tropical Depression Forms in Gulf of Mexico on 1st Day of
+                  Hurricane Season</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="us">
+        <h2><a class="uslink" href="#">WORLD</a></h2>
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <img
+              src="https://d.newsweek.com/en/full/1595761/donald-trump-jr-cpac-conservatives-president-son.webp?w=397&h=265&f=e2b24602ff4c4f6ec98541a16ba35678"
+              alt="image"
+            />
+            <div class="topic">
+              <a class="topilink" href="#"
+                >Don Jr. Set His Sights on Big Tech Months Before His Father's
+                Twitter Feud</a
+              >
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <img
+              src="https://d.newsweek.com/en/full/1595685/tuesday-primary-elections.webp?w=397&h=265&f=72276d64dab81e9c7d61d855dd436519"
+              alt="image"
+            />
+            <div class="topic">
+              <a class="topilink" href="#"
+                >What to Watch for As These 8 States and D.C. Head to the
+                Primaries</a
+              >
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <ul class="list-group">
+              <li class="list-group-item no-marg">
+                <img
+                  src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
+                  class="float-left list-img"
+                  alt="image"
+                />
+                <a class="no-marglink" href="#"
+                  >Elizabeth Warren Says Trump's Riot Plans Places 'Our
+                  Democracy in Danger'</a
+                >
+              </li>
+              <li class="list-group-item no-marg">
+                <img
+                  src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
+                  class="float-left list-img"
+                  alt="image"
+                />
+                <a class="no-marglink" href="#"
+                  >Elizabeth Warren Says Trump's Riot Plans Places 'Our
+                  Democracy in Danger'</a
+                >
+              </li>
+
+              <li class="list-group-item no-marg">
+                <img
+                  src="https://d.newsweek.com/en/full/1595756/tropical-depression-hurricane.webp?w=95&h=95&f=c7f642a3d869633aae58374d457e3e7d"
+                  class="float-left list-img"
+                  alt="image"
+                />
+                <a class="no-marglink" href="#"
+                  >Tropical Depression Forms in Gulf of Mexico on 1st Day of
+                  Hurricane Season</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="us">
+        <h2><a class="uslink" href="#">BUSINESS</a></h2>
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <img
+              src="https://d.newsweek.com/en/full/1595761/donald-trump-jr-cpac-conservatives-president-son.webp?w=397&h=265&f=e2b24602ff4c4f6ec98541a16ba35678"
+              alt="image"
+            />
+            <div class="topic">
+              <a class="topilink" href="#"
+                >Don Jr. Set His Sights on Big Tech Months Before His Father's
+                Twitter Feud</a
+              >
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <img
+              src="https://d.newsweek.com/en/full/1595685/tuesday-primary-elections.webp?w=397&h=265&f=72276d64dab81e9c7d61d855dd436519"
+              alt="image"
+            />
+            <div class="topic">
+              <a class="topilink" href="#"
+                >What to Watch for As These 8 States and D.C. Head to the
+                Primaries</a
+              >
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <ul class="list-group">
+              <li class="list-group-item no-marg">
+                <img
+                  src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
+                  class="float-left list-img"
+                  alt="image"
+                />
+                <a class="no-marglink" href="#"
+                  >Elizabeth Warren Says Trump's Riot Plans Places 'Our
+                  Democracy in Danger'</a
+                >
+              </li>
+              <li class="list-group-item no-marg">
+                <img
+                  src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
+                  class="float-left list-img"
+                  alt="image"
+                />
+                <a class="no-marglink" href="#"
+                  >Elizabeth Warren Says Trump's Riot Plans Places 'Our
+                  Democracy in Danger'</a
+                >
+              </li>
+
+              <li class="list-group-item no-marg">
+                <img
+                  src="https://d.newsweek.com/en/full/1595756/tropical-depression-hurricane.webp?w=95&h=95&f=c7f642a3d869633aae58374d457e3e7d"
+                  class="float-left list-img"
+                  alt="image"
+                />
+                <a class="no-marglink" href="#"
+                  >Tropical Depression Forms in Gulf of Mexico on 1st Day of
+                  Hurricane Season</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="us">
+        <h2><a class="uslink" href="#">CULTURE</a></h2>
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <img
+              src="https://d.newsweek.com/en/full/1595761/donald-trump-jr-cpac-conservatives-president-son.webp?w=397&h=265&f=e2b24602ff4c4f6ec98541a16ba35678"
+              alt="image"
+            />
+            <div class="topic">
+              <a class="topilink" href="#"
+                >Don Jr. Set His Sights on Big Tech Months Before His Father's
+                Twitter Feud</a
+              >
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <img
+              src="https://d.newsweek.com/en/full/1595685/tuesday-primary-elections.webp?w=397&h=265&f=72276d64dab81e9c7d61d855dd436519"
+              alt="image"
+            />
+            <div class="topic">
+              <a class="topilink" href="#"
+                >What to Watch for As These 8 States and D.C. Head to the
+                Primaries</a
+              >
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <ul class="list-group">
+              <li class="list-group-item no-marg">
+                <img
+                  src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
+                  class="float-left list-img"
+                  alt="image"
+                />
+                <a class="no-marglink" href="#"
+                  >Elizabeth Warren Says Trump's Riot Plans Places 'Our
+                  Democracy in Danger'</a
+                >
+              </li>
+              <li class="list-group-item no-marg">
+                <img
+                  src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
+                  class="float-left list-img"
+                  alt="image"
+                />
+                <a class="no-marglink" href="#"
+                  >Elizabeth Warren Says Trump's Riot Plans Places 'Our
+                  Democracy in Danger'</a
+                >
+              </li>
+
+              <li class="list-group-item no-marg">
+                <img
+                  src="https://d.newsweek.com/en/full/1595756/tropical-depression-hurricane.webp?w=95&h=95&f=c7f642a3d869633aae58374d457e3e7d"
+                  class="float-left list-img"
+                  alt="image"
+                />
+                <a class="no-marglink" href="#"
+                  >Tropical Depression Forms in Gulf of Mexico on 1st Day of
+                  Hurricane Season</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="us">
+        <h2><a class="uslink" href="#">TECH & SCIENCE</a></h2>
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <img
+              src="https://d.newsweek.com/en/full/1595761/donald-trump-jr-cpac-conservatives-president-son.webp?w=397&h=265&f=e2b24602ff4c4f6ec98541a16ba35678"
+              alt="image"
+            />
+            <div class="topic">
+              <a class="topilink" href="#"
+                >Don Jr. Set His Sights on Big Tech Months Before His Father's
+                Twitter Feud</a
+              >
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <img
+              src="https://d.newsweek.com/en/full/1595685/tuesday-primary-elections.webp?w=397&h=265&f=72276d64dab81e9c7d61d855dd436519"
+              alt="image"
+            />
+            <div class="topic">
+              <a class="topilink" href="#"
+                >What to Watch for As These 8 States and D.C. Head to the
+                Primaries</a
+              >
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <ul class="list-group">
+              <li class="list-group-item no-marg">
+                <img
+                  src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
+                  class="float-left list-img"
+                  alt="image"
+                />
+                <a class="no-marglink" href="#"
+                  >Elizabeth Warren Says Trump's Riot Plans Places 'Our
+                  Democracy in Danger'</a
+                >
+              </li>
+              <li class="list-group-item no-marg">
+                <img
+                  src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
+                  class="float-left list-img"
+                  alt="image"
+                />
+                <a class="no-marglink" href="#"
+                  >Elizabeth Warren Says Trump's Riot Plans Places 'Our
+                  Democracy in Danger'</a
+                >
+              </li>
+
+              <li class="list-group-item no-marg">
+                <img
+                  src="https://d.newsweek.com/en/full/1595756/tropical-depression-hurricane.webp?w=95&h=95&f=c7f642a3d869633aae58374d457e3e7d"
+                  class="float-left list-img"
+                  alt="image"
+                />
+                <a class="no-marglink" href="#"
+                  >Tropical Depression Forms in Gulf of Mexico on 1st Day of
+                  Hurricane Season</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="us">
+        <h2><a class="uslink" href="#">CULTURE</a></h2>
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <img
+              src="https://d.newsweek.com/en/full/1595761/donald-trump-jr-cpac-conservatives-president-son.webp?w=397&h=265&f=e2b24602ff4c4f6ec98541a16ba35678"
+              alt="image"
+            />
+            <div class="topic">
+              <a class="topilink" href="#"
+                >Don Jr. Set His Sights on Big Tech Months Before His Father's
+                Twitter Feud</a
+              >
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <img
+              src="https://d.newsweek.com/en/full/1595685/tuesday-primary-elections.webp?w=397&h=265&f=72276d64dab81e9c7d61d855dd436519"
+              alt="image"
+            />
+            <div class="topic">
+              <a class="topilink" href="#"
+                >What to Watch for As These 8 States and D.C. Head to the
+                Primaries</a
+              >
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <ul class="list-group">
+              <li class="list-group-item no-marg">
+                <img
+                  src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
+                  class="float-left list-img"
+                  alt="image"
+                />
+                <a class="no-marglink" href="#"
+                  >Elizabeth Warren Says Trump's Riot Plans Places 'Our
+                  Democracy in Danger'</a
+                >
+              </li>
+              <li class="list-group-item no-marg">
+                <img
+                  src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
+                  class="float-left list-img"
+                  alt="image"
+                />
+                <a class="no-marglink" href="#"
+                  >Elizabeth Warren Says Trump's Riot Plans Places 'Our
+                  Democracy in Danger'</a
+                >
+              </li>
+
+              <li class="list-group-item no-marg">
+                <img
+                  src="https://d.newsweek.com/en/full/1595756/tropical-depression-hurricane.webp?w=95&h=95&f=c7f642a3d869633aae58374d457e3e7d"
+                  class="float-left list-img"
+                  alt="image"
+                />
+                <a class="no-marglink" href="#"
+                  >Tropical Depression Forms in Gulf of Mexico on 1st Day of
+                  Hurricane Season</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="us">
+        <h2><a class="uslink" href="#">SPORTS</a></h2>
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <img
+              src="https://d.newsweek.com/en/full/1595761/donald-trump-jr-cpac-conservatives-president-son.webp?w=397&h=265&f=e2b24602ff4c4f6ec98541a16ba35678"
+              alt="image"
+            />
+            <div class="topic">
+              <a class="topilink" href="#"
+                >Don Jr. Set His Sights on Big Tech Months Before His Father's
+                Twitter Feud</a
+              >
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <img
+              src="https://d.newsweek.com/en/full/1595685/tuesday-primary-elections.webp?w=397&h=265&f=72276d64dab81e9c7d61d855dd436519"
+              alt="image"
+            />
+            <div class="topic">
+              <a class="topilink" href="#"
+                >What to Watch for As These 8 States and D.C. Head to the
+                Primaries</a
+              >
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <ul class="list-group">
+              <li class="list-group-item no-marg">
+                <img
+                  src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
+                  class="float-left list-img"
+                  alt="image"
+                />
+                <a class="no-marglink" href="#"
+                  >Elizabeth Warren Says Trump's Riot Plans Places 'Our
+                  Democracy in Danger'</a
+                >
+              </li>
+              <li class="list-group-item no-marg">
+                <img
+                  src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
+                  class="float-left list-img"
+                  alt="image"
+                />
+                <a class="no-marglink" href="#"
+                  >Elizabeth Warren Says Trump's Riot Plans Places 'Our
+                  Democracy in Danger'</a
+                >
+              </li>
+
+              <li class="list-group-item no-marg">
+                <img
+                  src="https://d.newsweek.com/en/full/1595756/tropical-depression-hurricane.webp?w=95&h=95&f=c7f642a3d869633aae58374d457e3e7d"
+                  class="float-left list-img"
+                  alt="image"
+                />
+                <a class="no-marglink" href="#"
+                  >Tropical Depression Forms in Gulf of Mexico on 1st Day of
+                  Hurricane Season</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row pre-foot">
+        <div class="col-12 col-lg-8 sub">
+          <img
+            src="https://d.newsweek.com/en/full/1589808/may-22-2020-cover.jpg?w=170&q=95&f=96101d0d430bef83aee5a95169c9b655"
+            alt="last one"
+            class="subimg1"
+          />
+          <img
+            src="https://d.newsweek.com/en/full/1591879/may-29-june-06-2020-cover.jpg?w=170&q=95&f=56aad51c81fc710a32b2778640b7e471"
+            alt="firstone"
+            class="subimg1"
+          />
+          <div class="pre-card">
+            <div class="card-title">
+              <h3>
+                In-depth Stories You Don't See Elsewhere About Topics You Want
+                to Read!
+              </h3>
+            </div>
+            <p class="crd-text">
+              All Access + Weekly Delivery.<br />
+              Choose A Membership That's Perfect for You!
+            </p>
+            <button class="subton">SUBSCRIBE</button>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4 news-letter">
+          <img
+            src="https://d.newsweek.com/en/full/1541302/starting5-homepage.png?w=397&h=265&q=90&f=742bce9a6f72dd8f19ba2e7fd5db06e5"
+            alt="image"
+            class="nsimg"
+          />
+          <div class="sgnupp">
+            <h3>The Starting 5</h3>
+            <p>
+              See why nearly a quarter of a million subscribers begin their day
+              with the Starting 5.
+            </p>
+            <form action="POST">
+              <input
+                type="text"
+                placeholder="Email address"
+                class="form-text"
+              />
+              <input type="submit" value="FREE SIGNUP" class="sub-mit" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footop">
+        <div class="ft-logo">
+          <svg
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 395.6 60"
+            style="enable-background: new 0 0 395.6 60;"
+            xml:space="preserve"
+          >
+            <g>
+              <path
+                class="st0"
+                d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7"
+              ></path>
+            </g>
+          </svg>
+          <small>&copy; 2020 NEWSWEEK</small>
+        </div>
+
+        <div class="socials">
+          <ul>
+            <li><i class="fa fa-facebook-square"></i></li>
+            <li><i class="fa fa-twitter"></i></li>
+            <li><i class="fa fa-instagram"></i></li>
+            <li><i class="fa fa-tumblr"></i></li>
+            <li><i class="fa fa-linkedin-in"></i></li>
+          </ul>
+        </div>
       </div>
       <hr />
-      <div class="row">
-        <div class="col-12 col-md-3">
-          <div class="image">
-            <a href="#"><img
-                src="https://d.newsweek.com/en/full/1591879/may-29-june-06-2020-cover.webp?w=290&h=387&q=90&f=49f033ce11b64c8820bee410347ced3f"
-                alt="china" /></a>
-          </div>
-          <h3 class="feats"><a href="#">SEE ALL FEATURES</a></h3>
-        </div>
-
-        <div class="col-12 col-md-9 arts">
-          <div class="row">
-            <div class="card col-12 col-md-4 ft-pad">
-              <img class="card-img-top"
-                src="https://d.newsweek.com/en/full/1590706/fea-china-banner.webp?w=466&h=311&l=50&t=50&q=90&f=2e93d189a56ba33aed2c6970c91e7b29"
-                alt="covid" />
-              <div class="card-body">
-                <div class="cat">
-                  <span>COVER</span>
-                  <span>NEWS</span>
-                </div>
-                <h3>
-                  <a href="#">America Is in a New Cold War and This Time the Communists
-                    Might Win</a>
-                </h3>
-              </div>
-            </div>
-
-            <div class="card col-12 col-md-4 ft-pad">
-              <img class="card-img-top"
-                src="https://d.newsweek.com/en/full/1591959/per-broadcast-01.webp?w=466&h=311&l=51&t=60&q=90&f=34753e5f2f265b8023b99371608271ec"
-                alt="trump" />
-              <div class="card-body">
-                <div class="cat">
-                  <span>PERISCOPE</span>
-                  <span>CULTURE</span>
-                </div>
-                <h3>
-                  <a href="#">Whether Trump Likes it or Not, Network News is Riding a
-                    Pandemic Ratings Boom</a>
-                </h3>
-              </div>
-            </div>
-
-            <div class="card col-12 col-md-4 ft-pad">
-              <img class="card-img-top"
-                src="https://d.newsweek.com/en/full/1590308/per-bezonomics-e-palette.webp?w=466&h=311&l=48&t=55&q=90&f=cab91399c3dd27dafc27183f6d7014e3"
-                alt="amazon" />
-              <div class="card-body">
-                <div class="cat">
-                  <span>PERISCOPE</span>
-                  <span>TECH & SCIENCE</span>
-                </div>
-                <h3>
-                  <a href="#">How Amazon's Bet on Autonomous Vehicles Can Help Protect
-                    Us from Viruses</a>
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="card col-12 col-md-3 ft-pad">
-          <img class="card-img-top"
-            src="https://d.newsweek.com/en/full/1591374/cul-books-banner.webp?w=466&h=311&l=52&t=57&q=90&f=df553f8697afea8b2ca82570783e966e"
-            alt="IMAGE" />
-          <div class="card-body">
-            <div class="cat">
-              <span>DOWNTIME</span>
-              <span>CULTURE</span>
-            </div>
-            <h3>
-              <a href="#">The 20 Must-Read Fiction and Nonfiction Books of the
-                Summer</a>
-            </h3>
-          </div>
-        </div>
-
-        <div class="card col-12 col-md-3 ft-pad">
-          <img class="card-img-top"
-            src="https://d.newsweek.com/en/full/1591269/cul-uncharted-frozentreats-banner.webp?w=466&h=311&l=48&t=49&q=90&f=10eca51c85d53a52b22ebeb83466472f"
-            alt="IMAGE" />
-          <div class="card-body">
-            <div class="cat">
-              <span>DOWNTIME</span>
-              <span>CULTURE</span>
-            </div>
-            <h3>
-              <a href="#">World's Finest Frozen Treats</a>
-            </h3>
-          </div>
-        </div>
-
-        <div class="card col-12 col-md-3 ft-pad">
-          <img class="card-img-top"
-            src="https://d.newsweek.com/en/full/1589884/cul-ps-ramyyoussef.webp?w=466&h=311&l=49&t=33&q=90&f=6d37f5ed478658c04e56df28dbd92ffc"
-            alt="IMAGE" />
-          <div class="card-body">
-            <div class="cat">
-              <span>DOWNTIME</span>
-              <span>CULTURE</span>
-            </div>
-            <h3>
-              <a href="#">Ramy Youssef has a bold vision for the second season of
-                Hulu's 'Ramy'</a>
-            </h3>
-          </div>
-        </div>
-
-        <div class="card col-12 col-md-3 ft-pad">
-          <img class="card-img-top"
-            src="https://d.newsweek.com/en/full/1591374/cul-books-banner.webp?w=466&h=311&l=52&t=57&q=90&f=df553f8697afea8b2ca82570783e966e"
-            alt="IMAGE" />
-          <div class="card-body">
-            <div class="cat">
-              <span>IN FOCUS</span>
-            </div>
-            <h3><a href="#">UNMASKED MAN</a></h3>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="editor">
-      <div class="mag-head">
-        <img src="./assets/img/favicon.png" alt="logo" />
-        <span>EDITOR'S PICK</span>
-      </div>
-      <hr />
-
-      <div class="row pick-1">
-        <div class="card col-12 col-md-3 no-pad">
-          <img class="card-img-top"
-            src="https://d.newsweek.com/en/full/1595802/jimmy-fallon-blackface.webp?w=397&h=265&f=21df038413dab736ee6952d1d3241fdd"
-            alt="IMAGE" />
-          <div class="card-body">
-            <h3>
-              <a href="#">Jimmy Fallon Says 'I'm Not a Racist' in 'Tonight Show'
-                Blackface Apology</a>
-            </h3>
-            <p>
-              The TV host followed up his Twitter apology for a 2000 SNL
-              sketch with an episode aimed at tackling racism.
-            </p>
-          </div>
-        </div>
-
-        <div class="card col-12 col-md-3 no-pad">
-          <img class="card-img-top"
-            src="https://d.newsweek.com/en/full/1595806/prince-harry-meghan-markle-morocco.webp?w=397&h=265&f=d0a069d88d5097f0596a6024e44fbfee"
-            alt="image" />
-          <div class="card-body">
-            <h3>
-              <a href="#">Prince Harry and Meghan Markle Could Stop Paparazzi Drones
-                Using Diana Law</a>
-            </h3>
-            <p>
-              The Duke and Duchess of Sussex could tackle the paparazzi using
-              a Californian law introduced after Princess Diana's death, legal
-              experts tell Newsweek.
-            </p>
-          </div>
-        </div>
-
-        <div class="card col-12 col-md-3 no-pad">
-          <img class="card-img-top"
-            src="https://d.newsweek.com/en/full/1595602/italy-coronavirus.webp?w=397&h=265&f=49e3890e24175cb054fd4dc7c42e8f2b"
-            alt="image" />
-          <div class="card-body">
-            <h3>
-              <a href="#">Italian Doctor's Claim Coronavirus Is Getting Weaker
-                Questioned by Experts</a>
-            </h3>
-            <p>
-              Alberto Zangrillo said viral loads from tests carried out in the
-              last 10 days were "infinitesimal" compared with samples from a
-              month ago.
-            </p>
-          </div>
-        </div>
-
-        <div class="card col-12 col-md-3 no-pad">
-          <img class="card-img-top"
-            src="https://d.newsweek.com/en/full/1595462/michael-jordan-chicago-bulls.webp?w=397&h=265&f=0beeba195d4ce9b0a424ee95e89d4ec0"
-            alt="image" />
-          <div class="card-body">
-            <h3>
-              <a href="#">Michael Jordan Makes Rare Political Statement on George
-                Floyd's Death</a>
-            </h3>
-            <p>
-              Jordan urged protesters to make their voices heard at the ballot
-              booth as nationwide demonstrations raged on for a sixth
-              consecutive night.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row pick-2">
-        <div class="card col-12 col-md-3 no-pad">
-          <img class="card-img-top"
-            src="https://d.newsweek.com/en/full/1595517/great-white-shark.webp?w=397&h=265&f=dc2349d3c99061d8124180107d76ec40"
-            alt="image" />
-          <div class="card-body">
-            <h3>
-              <a href="#">Great White Shark May Have Swum Into Open Ocean to Avoid
-                Mating Attempts</a>
-            </h3>
-            <p class="texts">
-              Unama'ki turned away from the waters off the eastern U.S. coast
-              and started heading deeper into the ocean at the start of April.
-            </p>
-          </div>
-        </div>
-
-        <div class="card col-12 col-md-3 no-pad">
-          <img class="card-img-top"
-            src="https://d.newsweek.com/en/full/1595480/wine-alcohol-drinking-stock-getty.webp?w=397&h=265&f=680e57524ce02e74982269d206eabb27"
-            alt="image" />
-          <div class="card-body">
-            <h3>
-              <a href="#">Estrogen Levels May Make Alcohol More Rewarding to Female
-                Mice, Study Finds</a>
-            </h3>
-            <p>
-              Findings may mean women drink to excess during certain points in
-              their menstrual cycle.
-            </p>
-          </div>
-        </div>
-
-        <div class="card col-12 col-md-3 no-pad">
-          <img class="card-img-top"
-            src="https://d.newsweek.com/en/full/1595821/camden-market-reopens.webp?w=397&h=265&f=481aa3c321cc96c5b90dd9a8a07872bd"
-            alt="image" />
-          <div class="card-body">
-            <h3>
-              <a href="#">Welcome to 'Mockdown' as COVID-19 Quarantine Ends in London…
-                Sort Of</a>
-            </h3>
-            <p>
-              You are allowed to go out but you should stay at home but you
-              should support local businesses but you mustn't gather in
-              groups, unless it's outside. But stay at home.
-            </p>
-          </div>
-        </div>
-
-        <div class="card col-12 col-md-3 no-pad">
-          <img class="card-img-top"
-            src="https://d.newsweek.com/en/full/1595652/magic-mushrooms.webp?w=397&h=265&f=5e5f165ec902f195a9fc04caeccf376f"
-            alt="image" />
-          <div class="card-body">
-            <h3>
-              <a href="#">A new study has examined the impact of psilocybin—the active
-                ingredient in magic mushrooms—on the brain.</a>
-            </h3>
-            <p>
-              A new study has examined the impact of psilocybin—the active
-              ingredient in magic mushrooms—on the brain.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="us">
-      <h2><a class="uslink" href="#">U.S</a></h2>
-      <div class="row">
-        <div class="col-12 col-md-4">
-          <img
-            src="https://d.newsweek.com/en/full/1595761/donald-trump-jr-cpac-conservatives-president-son.webp?w=397&h=265&f=e2b24602ff4c4f6ec98541a16ba35678"
-            alt="image" />
-          <div class="topic">
-            <a class="topilink" href="#">Don Jr. Set His Sights on Big Tech Months Before His Father's
-              Twitter Feud</a>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4">
-          <img
-            src="https://d.newsweek.com/en/full/1595685/tuesday-primary-elections.webp?w=397&h=265&f=72276d64dab81e9c7d61d855dd436519"
-            alt="image" />
-          <div class="topic">
-            <a class="topilink" href="#">What to Watch for As These 8 States and D.C. Head to the
-              Primaries</a>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4">
-          <ul class="list-group">
-            <li class="list-group-item no-marg">
-              <img
-                src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
-                class="float-left list-img" alt="image" />
-              <a class="no-marglink" href="#">Elizabeth Warren Says Trump's Riot Plans Places 'Our
-                Democracy in Danger'</a>
+      <div class="row col-12 footom">
+        <nav>
+          <ul class="nav col-6 col-md-12">
+            <li class="nav-item">
+              <h3 class="fhead">Editions:</h3>
             </li>
-            <li class="list-group-item no-marg">
-              <img
-                src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
-                class="float-left list-img" alt="image" />
-              <a class="no-marglink" href="#">Elizabeth Warren Says Trump's Riot Plans Places 'Our
-                Democracy in Danger'</a>
+            <li class="nav-item">
+              <a class="nav-link fhlink" href="#"
+                >U. S. Edition &nbsp; | &nbsp;</a
+              >
             </li>
 
-            <li class="list-group-item no-marg">
-              <img
-                src="https://d.newsweek.com/en/full/1595756/tropical-depression-hurricane.webp?w=95&h=95&f=c7f642a3d869633aae58374d457e3e7d"
-                class="float-left list-img" alt="image" />
-              <a class="no-marglink" href="#">Tropical Depression Forms in Gulf of Mexico on 1st Day of
-                Hurricane Season</a>
+            <li class="nav-item">
+              <a class="nav-link fhlink" href="#">日本 &nbsp; | &nbsp;</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link fhlink" href="#">Pakistan &nbsp; | &nbsp;</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link fhlink" href="#">Polska &nbsp; | &nbsp;</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link fhlink" href="#">România</a>
             </li>
           </ul>
-        </div>
-      </div>
-    </div>
-    <div class="us">
-      <h2><a class="uslink" href="#">WORLD</a></h2>
-      <div class="row">
-        <div class="col-12 col-md-4">
-          <img
-            src="https://d.newsweek.com/en/full/1595761/donald-trump-jr-cpac-conservatives-president-son.webp?w=397&h=265&f=e2b24602ff4c4f6ec98541a16ba35678"
-            alt="image" />
-          <div class="topic">
-            <a class="topilink" href="#">Don Jr. Set His Sights on Big Tech Months Before His Father's
-              Twitter Feud</a>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4">
-          <img
-            src="https://d.newsweek.com/en/full/1595685/tuesday-primary-elections.webp?w=397&h=265&f=72276d64dab81e9c7d61d855dd436519"
-            alt="image" />
-          <div class="topic">
-            <a class="topilink" href="#">What to Watch for As These 8 States and D.C. Head to the
-              Primaries</a>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4">
-          <ul class="list-group">
-            <li class="list-group-item no-marg">
-              <img
-                src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
-                class="float-left list-img" alt="image" />
-              <a class="no-marglink" href="#">Elizabeth Warren Says Trump's Riot Plans Places 'Our
-                Democracy in Danger'</a>
-            </li>
-            <li class="list-group-item no-marg">
-              <img
-                src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
-                class="float-left list-img" alt="image" />
-              <a class="no-marglink" href="#">Elizabeth Warren Says Trump's Riot Plans Places 'Our
-                Democracy in Danger'</a>
-            </li>
-
-            <li class="list-group-item no-marg">
-              <img
-                src="https://d.newsweek.com/en/full/1595756/tropical-depression-hurricane.webp?w=95&h=95&f=c7f642a3d869633aae58374d457e3e7d"
-                class="float-left list-img" alt="image" />
-              <a class="no-marglink" href="#">Tropical Depression Forms in Gulf of Mexico on 1st Day of
-                Hurricane Season</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="us">
-      <h2><a class="uslink" href="#">BUSINESS</a></h2>
-      <div class="row">
-        <div class="col-12 col-md-4">
-          <img
-            src="https://d.newsweek.com/en/full/1595761/donald-trump-jr-cpac-conservatives-president-son.webp?w=397&h=265&f=e2b24602ff4c4f6ec98541a16ba35678"
-            alt="image" />
-          <div class="topic">
-            <a class="topilink" href="#">Don Jr. Set His Sights on Big Tech Months Before His Father's
-              Twitter Feud</a>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4">
-          <img
-            src="https://d.newsweek.com/en/full/1595685/tuesday-primary-elections.webp?w=397&h=265&f=72276d64dab81e9c7d61d855dd436519"
-            alt="image" />
-          <div class="topic">
-            <a class="topilink" href="#">What to Watch for As These 8 States and D.C. Head to the
-              Primaries</a>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4">
-          <ul class="list-group">
-            <li class="list-group-item no-marg">
-              <img
-                src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
-                class="float-left list-img" alt="image" />
-              <a class="no-marglink" href="#">Elizabeth Warren Says Trump's Riot Plans Places 'Our
-                Democracy in Danger'</a>
-            </li>
-            <li class="list-group-item no-marg">
-              <img
-                src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
-                class="float-left list-img" alt="image" />
-              <a class="no-marglink" href="#">Elizabeth Warren Says Trump's Riot Plans Places 'Our
-                Democracy in Danger'</a>
-            </li>
-
-            <li class="list-group-item no-marg">
-              <img
-                src="https://d.newsweek.com/en/full/1595756/tropical-depression-hurricane.webp?w=95&h=95&f=c7f642a3d869633aae58374d457e3e7d"
-                class="float-left list-img" alt="image" />
-              <a class="no-marglink" href="#">Tropical Depression Forms in Gulf of Mexico on 1st Day of
-                Hurricane Season</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="us">
-      <h2><a class="uslink" href="#">CULTURE</a></h2>
-      <div class="row">
-        <div class="col-12 col-md-4">
-          <img
-            src="https://d.newsweek.com/en/full/1595761/donald-trump-jr-cpac-conservatives-president-son.webp?w=397&h=265&f=e2b24602ff4c4f6ec98541a16ba35678"
-            alt="image" />
-          <div class="topic">
-            <a class="topilink" href="#">Don Jr. Set His Sights on Big Tech Months Before His Father's
-              Twitter Feud</a>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4">
-          <img
-            src="https://d.newsweek.com/en/full/1595685/tuesday-primary-elections.webp?w=397&h=265&f=72276d64dab81e9c7d61d855dd436519"
-            alt="image" />
-          <div class="topic">
-            <a class="topilink" href="#">What to Watch for As These 8 States and D.C. Head to the
-              Primaries</a>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4">
-          <ul class="list-group">
-            <li class="list-group-item no-marg">
-              <img
-                src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
-                class="float-left list-img" alt="image" />
-              <a class="no-marglink" href="#">Elizabeth Warren Says Trump's Riot Plans Places 'Our
-                Democracy in Danger'</a>
-            </li>
-            <li class="list-group-item no-marg">
-              <img
-                src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
-                class="float-left list-img" alt="image" />
-              <a class="no-marglink" href="#">Elizabeth Warren Says Trump's Riot Plans Places 'Our
-                Democracy in Danger'</a>
-            </li>
-
-            <li class="list-group-item no-marg">
-              <img
-                src="https://d.newsweek.com/en/full/1595756/tropical-depression-hurricane.webp?w=95&h=95&f=c7f642a3d869633aae58374d457e3e7d"
-                class="float-left list-img" alt="image" />
-              <a class="no-marglink" href="#">Tropical Depression Forms in Gulf of Mexico on 1st Day of
-                Hurricane Season</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="us">
-      <h2><a class="uslink" href="#">TECH & SCIENCE</a></h2>
-      <div class="row">
-        <div class="col-12 col-md-4">
-          <img
-            src="https://d.newsweek.com/en/full/1595761/donald-trump-jr-cpac-conservatives-president-son.webp?w=397&h=265&f=e2b24602ff4c4f6ec98541a16ba35678"
-            alt="image" />
-          <div class="topic">
-            <a class="topilink" href="#">Don Jr. Set His Sights on Big Tech Months Before His Father's
-              Twitter Feud</a>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4">
-          <img
-            src="https://d.newsweek.com/en/full/1595685/tuesday-primary-elections.webp?w=397&h=265&f=72276d64dab81e9c7d61d855dd436519"
-            alt="image" />
-          <div class="topic">
-            <a class="topilink" href="#">What to Watch for As These 8 States and D.C. Head to the
-              Primaries</a>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4">
-          <ul class="list-group">
-            <li class="list-group-item no-marg">
-              <img
-                src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
-                class="float-left list-img" alt="image" />
-              <a class="no-marglink" href="#">Elizabeth Warren Says Trump's Riot Plans Places 'Our
-                Democracy in Danger'</a>
-            </li>
-            <li class="list-group-item no-marg">
-              <img
-                src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
-                class="float-left list-img" alt="image" />
-              <a class="no-marglink" href="#">Elizabeth Warren Says Trump's Riot Plans Places 'Our
-                Democracy in Danger'</a>
-            </li>
-
-            <li class="list-group-item no-marg">
-              <img
-                src="https://d.newsweek.com/en/full/1595756/tropical-depression-hurricane.webp?w=95&h=95&f=c7f642a3d869633aae58374d457e3e7d"
-                class="float-left list-img" alt="image" />
-              <a class="no-marglink" href="#">Tropical Depression Forms in Gulf of Mexico on 1st Day of
-                Hurricane Season</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="us">
-      <h2><a class="uslink" href="#">CULTURE</a></h2>
-      <div class="row">
-        <div class="col-12 col-md-4">
-          <img
-            src="https://d.newsweek.com/en/full/1595761/donald-trump-jr-cpac-conservatives-president-son.webp?w=397&h=265&f=e2b24602ff4c4f6ec98541a16ba35678"
-            alt="image" />
-          <div class="topic">
-            <a class="topilink" href="#">Don Jr. Set His Sights on Big Tech Months Before His Father's
-              Twitter Feud</a>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4">
-          <img
-            src="https://d.newsweek.com/en/full/1595685/tuesday-primary-elections.webp?w=397&h=265&f=72276d64dab81e9c7d61d855dd436519"
-            alt="image" />
-          <div class="topic">
-            <a class="topilink" href="#">What to Watch for As These 8 States and D.C. Head to the
-              Primaries</a>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4">
-          <ul class="list-group">
-            <li class="list-group-item no-marg">
-              <img
-                src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
-                class="float-left list-img" alt="image" />
-              <a class="no-marglink" href="#">Elizabeth Warren Says Trump's Riot Plans Places 'Our
-                Democracy in Danger'</a>
-            </li>
-            <li class="list-group-item no-marg">
-              <img
-                src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
-                class="float-left list-img" alt="image" />
-              <a class="no-marglink" href="#">Elizabeth Warren Says Trump's Riot Plans Places 'Our
-                Democracy in Danger'</a>
-            </li>
-
-            <li class="list-group-item no-marg">
-              <img
-                src="https://d.newsweek.com/en/full/1595756/tropical-depression-hurricane.webp?w=95&h=95&f=c7f642a3d869633aae58374d457e3e7d"
-                class="float-left list-img" alt="image" />
-              <a class="no-marglink" href="#">Tropical Depression Forms in Gulf of Mexico on 1st Day of
-                Hurricane Season</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="us">
-      <h2><a class="uslink" href="#">SPORTS</a></h2>
-      <div class="row">
-        <div class="col-12 col-md-4">
-          <img
-            src="https://d.newsweek.com/en/full/1595761/donald-trump-jr-cpac-conservatives-president-son.webp?w=397&h=265&f=e2b24602ff4c4f6ec98541a16ba35678"
-            alt="image" />
-          <div class="topic">
-            <a class="topilink" href="#">Don Jr. Set His Sights on Big Tech Months Before His Father's
-              Twitter Feud</a>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4">
-          <img
-            src="https://d.newsweek.com/en/full/1595685/tuesday-primary-elections.webp?w=397&h=265&f=72276d64dab81e9c7d61d855dd436519"
-            alt="image" />
-          <div class="topic">
-            <a class="topilink" href="#">What to Watch for As These 8 States and D.C. Head to the
-              Primaries</a>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4 ">
-          <ul class="list-group">
-            <li class="list-group-item no-marg">
-              <img
-                src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
-                class="float-left list-img" alt="image" />
-              <a class="no-marglink" href="#">Elizabeth Warren Says Trump's Riot Plans Places 'Our
-                Democracy in Danger'</a>
-            </li>
-            <li class="list-group-item no-marg">
-              <img
-                src="https://d.newsweek.com/en/full/1595769/elizabeth-warren.webp?w=95&h=95&f=5ddc35808c9708b7c89d93076aaf8b49"
-                class="float-left list-img" alt="image" />
-              <a class="no-marglink" href="#">Elizabeth Warren Says Trump's Riot Plans Places 'Our
-                Democracy in Danger'</a>
-            </li>
-
-            <li class="list-group-item no-marg">
-              <img
-                src="https://d.newsweek.com/en/full/1595756/tropical-depression-hurricane.webp?w=95&h=95&f=c7f642a3d869633aae58374d457e3e7d"
-                class="float-left list-img" alt="image" />
-              <a class="no-marglink" href="#">Tropical Depression Forms in Gulf of Mexico on 1st Day of
-                Hurricane Season</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="row pre-foot">
-      <div class="col-12 col-lg-8 sub">
-        <img
-          src="https://d.newsweek.com/en/full/1589808/may-22-2020-cover.jpg?w=170&q=95&f=96101d0d430bef83aee5a95169c9b655"
-          alt="last one" class="subimg1"/>
-        <img
-          src="https://d.newsweek.com/en/full/1591879/may-29-june-06-2020-cover.jpg?w=170&q=95&f=56aad51c81fc710a32b2778640b7e471"
-          alt="firstone" class="subimg1" />
-        <div class="pre-card">
-          <div class="card-title">
-            <h3>
-              In-depth Stories You Don't See Elsewhere About Topics You Want
-              to Read!
-            </h3>
-          </div>
-          <p class="crd-text">
-            All Access + Weekly Delivery.<br />
-            Choose A Membership That's Perfect for You!
-          </p>
-          <button class="subton">SUBSCRIBE</button>
-        </div>
+        </nav>
       </div>
 
-      <div class="col-12 col-lg-4 news-letter">
-        <img
-          src="https://d.newsweek.com/en/full/1541302/starting5-homepage.png?w=397&h=265&q=90&f=742bce9a6f72dd8f19ba2e7fd5db06e5"
-          alt="image" class="nsimg"/>
-        <div class="sgnupp">
-          <h3>The Starting 5</h3>
-          <p>
-            See why nearly a quarter of a million subscribers begin their day
-            with the Starting 5.
-          </p>
-          <form action="POST">
-            <input type="text" placeholder="Email address" class="form-text" />
-            <input type="submit" value="FREE SIGNUP" class="sub-mit" />
-          </form>
+      <div class="row footom">
+        <div class="row col-12">
+          <nav>
+            <ul class="nav col-12">
+              <li class="nav-item">
+                <a class="nav-link flink" href="#">About Us &nbsp; | &nbsp;</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link flink" href="#"
+                  >Corrections &nbsp; | &nbsp;</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link flink" href="#"
+                  >Contact Us &nbsp; | &nbsp;</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link flink" href="#"
+                  >Editorial Guidlines &nbsp; | &nbsp;</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link flink" href="#">Advertise &nbsp; | &nbsp;</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link flink" href="#">Copyright &nbsp; | &nbsp;</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link flink" href="#"
+                  >Terms and Conditions &nbsp; | &nbsp;</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link flink" href="#"
+                  >Privacy Policy &nbsp; | &nbsp;</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link flink" href="#"
+                  >Cookie Policy &nbsp; | &nbsp;</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link flink" href="#"
+                  >Terms of Sale &nbsp; | &nbsp;</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link flink" href="#">Archive &nbsp; | &nbsp;</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link flink" href="#"
+                  >Announcements &nbsp; | &nbsp;</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link flink" href="#">Consent preferences</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
-    </div>
-  </main>
-  <footer>
-    <div class="footop">
-      <div class="ft-logo">
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px" y="0px" viewBox="0 0 395.6 60" style="enable-background: new 0 0 395.6 60;" xml:space="preserve">
-          <g>
-            <path class="st0"
-              d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7">
-            </path>
-          </g>
-        </svg>
-        <small>&copy; 2020 NEWSWEEK</small>
-      </div>
-
-      <div class="socials">
-        <ul>
-          <li><i class="fa fa-facebook-square"></i></li>
-          <li><i class="fa fa-twitter"></i></li>
-          <li><i class="fa fa-instagram"></i></li>
-          <li><i class="fa fa-tumblr"></i></li>
-          <li><i class="fa fa-linkedin-in"></i></li>
-        </ul>
-      </div>
-    </div>
-    <hr />
-    <div class="row col-12 footom">
-      <nav>
-        <ul class="nav col-6 col-md-12">
-          <li class="nav-item">
-            <h3 class="fhead">Editions:</h3>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fhlink" href="#">U. S. Edition &nbsp; | &nbsp;</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link fhlink" href="#">日本 &nbsp; | &nbsp;</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link fhlink" href="#">Pakistan &nbsp; | &nbsp;</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link fhlink" href="#">Polska &nbsp; | &nbsp;</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link fhlink" href="#">România</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="row footom">
-        <div class=" row col-12">
-      <nav>
-        <ul class="nav col-12">
-          <li class="nav-item">
-            <a class="nav-link flink" href="#">About Us &nbsp; | &nbsp;</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link flink" href="#">Corrections &nbsp; | &nbsp;</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link flink" href="#">Contact Us &nbsp; | &nbsp;</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link flink" href="#">Editorial Guidlines &nbsp; | &nbsp;</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link flink" href="#">Advertise &nbsp; | &nbsp;</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link flink" href="#">Copyright &nbsp; | &nbsp;</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link flink" href="#">Terms and Conditions &nbsp; | &nbsp;</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link flink" href="#">Privacy Policy &nbsp; | &nbsp;</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link flink" href="#">Cookie Policy &nbsp; | &nbsp;</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link flink" href="#">Terms of Sale &nbsp; | &nbsp;</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link flink" href="#">Archive &nbsp; | &nbsp;</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link flink" href="#">Announcements &nbsp; | &nbsp;</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link flink" href="#">Consent preferences</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    </div>
-  </footer>
-  <script src="./assets/js/app.js"></script>
-</body>
-
+    </footer>
+    <script src="./assets/js/app.js"></script>
+  </body>
 </html>

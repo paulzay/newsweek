@@ -45,6 +45,8 @@ body {
 
     .btn-yellow {
       background-color: $yl;
+      font-size: 14px;
+      font-weight: 600;
     }
 
     .mynav {
@@ -66,6 +68,29 @@ body {
         font-weight: 100;
       }
     }
+    @media (max-width: 991px) {
+      height: 60px;
+      padding: 10px 20px 20px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+
+      svg {
+        width: 40%;
+      }
+
+      .date {
+        display: none;
+      }
+
+      .mynav {
+        display: none;
+      }
+    }
+  }
+
+  .categories {
+    margin: 30px 15px;
   }
 
   .ft-pad {
@@ -202,12 +227,8 @@ body {
   }
 
   .row h3 {
-    color: #999;
+    color: $hl;
     font-size: 16px;
-  }
-
-  .categories {
-    margin-top: 30px;
   }
 
   .sgnup {
@@ -395,8 +416,8 @@ body {
   }
 
   .us {
-    margin: 30px 20px;
     border-top: 1px solid #ccc;
+    margin: 30px 20px;
 
     .uslink {
       color: $red;
@@ -475,15 +496,3 @@ footer {
     }
   }
 }
-
-// @include media-breakpoint-up(sm) {}
-
-// @include media-breakpoint-up(md) {}
-
-// @include media-breakpoint-up(lg) {}
-
-// @include media-breakpoint-up(xl) {
-//   .header {
-//     display: flex;
-//   }
-// }
