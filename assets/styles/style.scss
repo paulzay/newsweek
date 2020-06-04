@@ -185,6 +185,29 @@ body {
     }
   }
 
+  .d8 {
+    border-top: 0;
+  }
+
+  .db8 {
+    border: 0;
+    border-top: 1px solid $hl;
+
+    .dbimg {
+      float: left;
+      margin-right: 20px;
+    }
+
+    .dblinkk {
+      color: $lb;
+    }
+
+    .author {
+      color: $llb;
+      font-size: 14px;
+    }
+  }
+
   .debate {
     .dtop {
       border-bottom: 3px solid $bl;
@@ -205,12 +228,12 @@ body {
         margin-right: 20px;
       }
 
-      .dblink {
-        color: $lb;
+      .dblinkk {
+        color: $llb;
       }
 
       .author {
-        color: $llb;
+        color: $b;
         font-size: 14px;
       }
     }
