@@ -6,8 +6,12 @@ $font-stack: "Roboto", sans-serif;
 $white: #fff;
 $red: #f72210;
 $lb: #333;
+$llb: #555;
 $yl: rgb(255, 255, 0);
 $brdr: #f4f5f6;
+$b: #000;
+$hl: #999;
+$bl: rgb(0, 0, 255);
 //STYLES
 
 * a {
@@ -64,48 +68,46 @@ body {
     }
   }
 
-  .ft-stories {
-    .ft-pad {
-      border: none !important;
+  .ft-pad {
+    border: 0;
 
-      .card-body {
-        padding: 20px 0 !important;
+    .card-body {
+      padding: 20px 0;
 
-        h3 a {
-          font-size: 24px;
-          color: #000;
-          font-weight: bold;
-        }
+      .ftplink {
+        color: $b;
+        font-size: 24px;
+        font-weight: bold;
+      }
 
-        p {
-          font-size: 15px;
-        }
+      p {
+        font-size: 15px;
       }
     }
   }
 
   .tp-story {
     .ft-padd {
-      border: none !important;
+      border: 0;
 
       .card-body {
-        padding: 20px 0 !important;
+        padding: 20px 0;
+      }
 
-        .card-title a {
-          font-size: 20px;
-          color: #000;
-          font-weight: 600;
-        }
+      .ctext {
+        color: $b;
+        font-size: 20px;
+        font-weight: 600;
       }
     }
 
     .noo-pad {
-      border: none !important;
-      padding: 20px 0;
+      border: 0;
       margin-right: 10px;
+      padding: 20px 0;
 
-      a {
-        color: #999;
+      .hlink {
+        color: $hl;
       }
 
       img {
@@ -115,23 +117,23 @@ body {
 
     .more-stories {
       .st-padd {
-        border: none;
-        border-top: 1px solid rgb(165, 164, 164);
-        padding: 10px 0 !important;
+        border: 0;
+        border-top: 1px solid $hl;
+        padding: 10px 0;
 
-        img {
+        .stimg {
           float: left;
           margin-right: 20px;
         }
 
-        h4 a {
+        .mrlink {
+          color: $b;
           font-size: 16px;
-          color: #000;
         }
 
         p {
-          font-weight: 300;
           font-size: 15px;
+          font-weight: 300;
         }
       }
     }
@@ -139,52 +141,48 @@ body {
 
   .debate {
     .dtop {
+      border-bottom: 3px solid $bl;
       border-top: 3px solid $red;
-      border-bottom: 3px solid blue;
       margin-bottom: 20px;
     }
 
     .d8 {
-      border-top: none !important;
+      border-top: 0;
     }
 
     .db8 {
-      border: none;
-      border-top: 1px solid rgb(150, 147, 147);
+      border: 0;
+      border-top: 1px solid $hl;
 
-      img {
+      .dbimg {
         float: left;
         margin-right: 20px;
       }
 
-      h3 {
-        a {
-          color: #333;
-        }
+      .dblink {
+        color: $lb;
       }
 
-      p {
-        color: #555;
+      .author {
+        color: $llb;
         font-size: 14px;
       }
     }
 
     .db88 {
-      border: none;
-      border-top: 1px solid #555;
+      border: 0;
+      border-top: 1px solid $llb;
 
-      img {
+      .dbimg {
         float: right;
       }
 
-      h3 {
-        a {
-          color: #333;
-        }
+      .dblink {
+        color: $llb;
       }
 
-      p {
-        color: #555;
+      .author {
+        color: $llb;
         font-size: 14px;
       }
     }
@@ -192,14 +190,14 @@ body {
 
   .d-flex {
     background-color: $white;
+    border-bottom: 1px solid $llb;
     font-size: 1.1em;
     height: 3.5em;
     padding-top: 10px;
-    border-bottom: 1px solid rgba(3, 3, 3, 0.4);
 
     .nav-link {
-      color: #333;
-      border-right: 1px solid rgba(3, 3, 3, 0.4);
+      border-right: 1px solid $llb;
+      color: $lb;
     }
   }
 
@@ -209,20 +207,20 @@ body {
   }
 
   .categories {
-    margin: 30px 0 0 0;
+    margin-top: 30px;
   }
 
   .sgnup {
-    color: #333;
     background-color: #f4f5f6;
-    padding: 20px;
-    margin: 30px;
     border: 1px solid #e5e5e5;
+    color: $lb;
+    margin: 30px;
+    padding: 20px;
 
     .top {
       display: inline;
 
-      img {
+      .logoimg {
         float: left;
         margin-right: 20px;
       }
@@ -232,11 +230,11 @@ body {
       margin-top: 15px;
 
       .f-text {
-        width: 100%;
-        padding-left: 10px;
+        border: 1px solid #e0e1e1;
         font-weight: 300;
         line-height: 30px;
-        border: 1px solid #e0e1e1;
+        padding-left: 10px;
+        width: 100%;
       }
 
       .submit {
@@ -284,45 +282,50 @@ body {
   }
 
   .arts {
-    display: flex;
     align-items: flex-end;
+    display: flex;
   }
 
   .pre-foot {
     margin: 40px 20px;
 
-    .card-body {
+    .pre-card {
       h3 {
-        color: #000;
-        font-weight: 600;
+        color: $b;
         font-size: 22px;
+        font-weight: 600;
       }
 
-      p {
-        margin-top: 15px;
+      .crd-text {
+        font-size: 16px;
         font-weight: 300;
         line-height: 1.2em;
-        font-size: 16px;
+        margin-top: 15px;
       }
 
       button {
         background-color: $red;
-        border: none;
+        border: 0;
+        border-radius: 4px;
+        color: $white;
         height: 40px;
         width: 150px;
-        color: white;
-        border-radius: 4px;
       }
     }
 
     .sub {
+      background-color: #f4f5f6;
       display: flex;
       padding: 30px;
-      background-color: #f4f5f6;
 
-      img {
-        width: 170px;
+      .subimg1 {
         height: 228px;
+        width: 170px;
+      }
+
+      .subimg2 {
+        height: 228px;
+        width: 170px;
       }
     }
 
@@ -330,7 +333,7 @@ body {
       background-color: #f4f5f6;
       display: flex;
 
-      img {
+      .nsimg {
         width: 48%;
       }
 
@@ -339,9 +342,9 @@ body {
         padding: 30px 20px;
 
         h3 {
-          color: #000;
-          font-weight: 600;
+          color: $b;
           font-size: 22px;
+          font-weight: 600;
         }
 
         p {
@@ -377,10 +380,10 @@ body {
     margin: 30px 20px;
 
     .no-pad {
-      border: none !important;
+      border: 0;
 
       .card-body {
-        padding: 20px 0 !important;
+        padding: 20px 0;
 
         h3 a {
           color: #333;
@@ -402,7 +405,7 @@ body {
 
     .topic {
       .topilink {
-        color: #333;
+        color: $lb;
         font-size: 20px;
         font-weight: 400;
 
