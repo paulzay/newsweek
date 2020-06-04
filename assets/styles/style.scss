@@ -395,15 +395,13 @@ body {
     margin: 30px 20px;
     border-top: 1px solid #ccc;
 
-    h2 {
-      a {
-        color: $red;
-        font-size: 22px;
-      }
+    .uslink {
+      color: $red;
+      font-size: 22px;
     }
 
     .topic {
-      a {
+      .topilink {
         color: #333;
         font-size: 20px;
         font-weight: 400;
@@ -416,8 +414,8 @@ body {
     }
 
     .no-marg {
-      border: none !important;
-      padding: 0 0 10px 0 !important;
+      border: 0;
+      padding: 0 0 10px;
 
       img {
         margin-right: 20px;
@@ -462,9 +460,11 @@ footer {
       color: #666;
       margin-top: 7px;
     }
+
     .fhlink {
       color: rgb(97, 81, 81);
     }
+
     .flink {
       color: #666;
       font-size: 13px;
