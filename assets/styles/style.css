@@ -403,12 +403,12 @@ body .us .no-marg img {
   margin-right: 20px;
 }
 
-body .us .no-marg a {
+body .us .no-marg .no-marglink {
   color: #333;
   font-weight: 600;
 }
 
-body .us .no-marg a:hover {
+body .us .no-marg .no-marglink:hover {
   color: #f72210;
   text-decoration: none;
 }
@@ -441,14 +441,18 @@ footer .footop .socials ul li {
   margin-left: 20px;
 }
 
-footer .footom h3 {
+footer .footom .fhead {
   color: #666;
   margin-top: 7px;
 }
 
-footer .footom a {
-  font-size: 13px;
+footer .footom .fhlink {
+  color: #615151;
+}
+
+footer .footom .flink {
   color: #666;
+  font-size: 13px;
   font-weight: 300;
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,8 +2,7 @@
 
 //VARIABLES
 
-$font-stack: 'Roboto',
-sans-serif;
+$font-stack: "Roboto", sans-serif;
 $white: #fff;
 $red: #f72210;
 $lb: #333;
@@ -20,7 +19,6 @@ $brdr: #f4f5f6;
 }
 
 body {
-
   background-color: $white;
   color: $lb;
   font-size: 16px;
@@ -425,7 +423,7 @@ body {
         margin-right: 20px;
       }
 
-      a {
+      .no-marglink {
         color: #333;
         font-weight: 600;
 
@@ -460,17 +458,17 @@ footer {
   }
 
   .footom {
-    h3 {
+    .fhead {
       color: #666;
       margin-top: 7px;
     }
-
-    a {
-      font-size: 13px;
+    .fhlink {
+      color: rgb(97, 81, 81);
+    }
+    .flink {
       color: #666;
+      font-size: 13px;
       font-weight: 300;
-
-      // line-height: 1.6em;
     }
   }
 }
