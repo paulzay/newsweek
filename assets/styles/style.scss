@@ -541,21 +541,31 @@ body {
 footer {
   margin: 20px;
 
-  .footop {
-    display: flex;
-    justify-content: space-between;
+  .d-flex {
+    border-bottom: 0;
+  }
 
+  .footop {
     .ft-logo svg {
-      width: 236px;
       height: 36px;
-      margin-right: 15px;
       margin-bottom: 12px;
-      fill: $red;
+      margin-right: 15px;
+      width: 236px;
+    }
+
+    small {
+      font-weight: 300;
     }
 
     .socials ul li {
-      display: inline-flex;
       margin-left: 20px;
+    }
+
+    @media (max-width: 767px) {
+      .thetop {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 
@@ -567,6 +577,8 @@ footer {
 
     .fhlink {
       color: rgb(97, 81, 81);
+      font-weight: 300;
+      font-size: 13px;
     }
 
     .flink {
