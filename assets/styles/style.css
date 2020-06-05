@@ -10,6 +10,7 @@ body {
   background-color: #fff;
   color: #333;
   font-size: 16px;
+  max-width: 1310px;
 }
 
 body header {
@@ -38,25 +39,25 @@ body header .btn-yellow {
 body header .mynav {
   background-color: #fff;
   border-bottom: 1px solid #f4f5f6;
-  height: 60px;
   margin-top: 20px;
   padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 body header .mynav a {
-  border-left: 1px solid #f4f5f6;
   color: #333;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
 }
 
-body header .mynav ul li:last-child {
+body header .mynav .searchbar {
   color: #333;
   font-weight: 100;
   padding-top: 10px;
 }
 
-body header .mynav ul li:last-child input {
+body header .mynav .searchbar input {
   border: 0;
   width: 80px;
 }
@@ -439,6 +440,14 @@ body .pre-foot .news-letter .sgnupp form .form-text {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  body .pre-foot .sub img {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  body .pre-foot .sub .subimg2 {
+    margin-top: -100px;
+  }
 }
 
 body .editor {
@@ -462,6 +471,10 @@ body .editor .no-pad .card-body h3 a {
 body .us {
   border-top: 1px solid #ccc;
   margin: 30px 20px;
+}
+
+body .us .card {
+  border: 0;
 }
 
 body .us .uslink {

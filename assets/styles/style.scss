@@ -26,6 +26,7 @@ body {
   background-color: $white;
   color: $lb;
   font-size: 16px;
+  max-width: 1310px;
 
   header {
     background-color: $red;
@@ -52,21 +53,24 @@ body {
     .mynav {
       background-color: $white;
       border-bottom: 1px solid $brdr;
-      height: 60px;
+      // height: 60px;
       margin-top: 20px;
       padding-top: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
 
       a {
-        border-left: 1px solid $brdr;
+        // border-left: 1px solid $brdr;
         color: $lb;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 600;
       }
 
-      ul li:last-child {
+      .searchbar {
         color: $lb;
         font-weight: 100;
         padding-top: 10px;
+
         input {
           border: 0;
           width: 80px;
@@ -457,6 +461,14 @@ body {
       .sub {
         display: flex;
         flex-direction: column;
+
+        img {
+          align-self: center;
+        }
+
+        .subimg2 {
+          margin-top: -100px;
+        }
       }
     }
   }
@@ -482,6 +494,10 @@ body {
   .us {
     border-top: 1px solid #ccc;
     margin: 30px 20px;
+
+    .card {
+      border: 0;
+    }
 
     .uslink {
       color: $red;
