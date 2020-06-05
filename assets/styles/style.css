@@ -50,9 +50,15 @@ body header .mynav a {
   font-weight: 600;
 }
 
-body header .mynav ul:last-child {
+body header .mynav ul li:last-child {
   color: #333;
   font-weight: 100;
+  padding-top: 10px;
+}
+
+body header .mynav ul li:last-child input {
+  border: 0;
+  width: 80px;
 }
 
 @media (max-width: 991px) {

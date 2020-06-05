@@ -63,9 +63,14 @@ body {
         font-weight: 600;
       }
 
-      ul:last-child {
+      ul li:last-child {
         color: $lb;
         font-weight: 100;
+        padding-top: 10px;
+        input {
+          border: 0;
+          width: 80px;
+        }
       }
     }
 
