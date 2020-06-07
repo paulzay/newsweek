@@ -31,10 +31,9 @@ body {
   header {
     background-color: $red;
     color: $white;
-
-    .news {
-      padding: 20px;
-    }
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
 
     svg {
       fill: $white;
@@ -50,34 +49,6 @@ body {
       font-weight: 600;
     }
 
-    .mynav {
-      background-color: $white;
-      border-bottom: 1px solid $brdr;
-      // height: 60px;
-      margin-top: 20px;
-      padding-top: 10px;
-      padding-left: 15px;
-      padding-right: 15px;
-
-      a {
-        // border-left: 1px solid $brdr;
-        color: $lb;
-        font-size: 16px;
-        font-weight: 600;
-      }
-
-      .searchbar {
-        color: $lb;
-        font-weight: 100;
-        padding-top: 10px;
-
-        input {
-          border: 0;
-          width: 80px;
-        }
-      }
-    }
-
     @media (max-width: 991px) {
       height: 60px;
       padding: 10px 20px 20px 20px;
@@ -90,10 +61,6 @@ body {
       }
 
       .date {
-        display: none;
-      }
-
-      .mynav {
         display: none;
       }
     }
@@ -116,6 +83,34 @@ body {
       .mynav {
         display: none;
       }
+    }
+  }
+
+  .mynav {
+    background-color: $white;
+    border-bottom: 1px solid $brdr;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    a {
+      color: $lb;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    input {
+      border: 0;
+      width: 70px;
+      margin-top: 0;
+      height: 20px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .mynav {
+      display: none;
+      background-color: gray;
     }
   }
 

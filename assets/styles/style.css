@@ -16,10 +16,9 @@ body {
 body header {
   background-color: #f72210;
   color: #fff;
-}
-
-body header .news {
-  padding: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 body header svg {
@@ -36,32 +35,6 @@ body header .btn-yellow {
   font-weight: 600;
 }
 
-body header .mynav {
-  background-color: #fff;
-  border-bottom: 1px solid #f4f5f6;
-  margin-top: 20px;
-  padding-top: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-body header .mynav a {
-  color: #333;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-body header .mynav .searchbar {
-  color: #333;
-  font-weight: 100;
-  padding-top: 10px;
-}
-
-body header .mynav .searchbar input {
-  border: 0;
-  width: 80px;
-}
-
 @media (max-width: 991px) {
   body header {
     height: 60px;
@@ -75,9 +48,6 @@ body header .mynav .searchbar input {
     width: 40%;
   }
   body header .date {
-    display: none;
-  }
-  body header .mynav {
     display: none;
   }
 }
@@ -99,6 +69,34 @@ body header .mynav .searchbar input {
   }
   body header .mynav {
     display: none;
+  }
+}
+
+body .mynav {
+  background-color: #fff;
+  border-bottom: 1px solid #f4f5f6;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+body .mynav a {
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+body .mynav input {
+  border: 0;
+  width: 70px;
+  margin-top: 0px;
+  height: 20px;
+}
+
+@media (max-width: 991px) {
+  body .mynav {
+    display: none;
+    background-color: gray;
   }
 }
 
