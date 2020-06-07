@@ -89,7 +89,7 @@ body .mynav a {
 body .mynav input {
   border: 0;
   width: 70px;
-  margin-top: 0px;
+  margin-top: 0;
   height: 20px;
 }
 
@@ -333,6 +333,12 @@ body .mag-head {
 
 body .pre-foot {
   margin: 40px 20px;
+  max-width: 1210px;
+}
+
+body .pre-foot h2 {
+  font-size: 18px;
+  color: #f72210;
 }
 
 body .pre-foot .pre-card h3 {
