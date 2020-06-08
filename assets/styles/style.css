@@ -46,9 +46,11 @@ body header .btn-yellow {
     top: 0;
     z-index: 999;
   }
+
   body header .img-logo {
     width: 40%;
   }
+
   body header .date {
     display: none;
   }
@@ -63,12 +65,15 @@ body header .btn-yellow {
     top: 0;
     z-index: 999;
   }
+
   body header svg {
     width: 40%;
   }
+
   body header .date {
     display: none;
   }
+
   body header .mynav {
     display: none;
   }
@@ -438,177 +443,181 @@ body .pre-foot .news-letter .sgnupp form .form-text {
   height: 35px;
 }
 
-body .pre-foot .sub {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+@media (max-width: 767px) {
+  body .pre-foot .sub {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  body .pre-foot .sub img {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+  }
+
+  body .pre-foot .sub .subimg2 {
+    margin-top: -200px;
+    margin-left: 100px;
+  }
+
+  body .pre-foot .news-letter img {
+    display: none;
+  }
+
+  body .pre-foot .news-letter .sgnupp {
+    text-align: center;
+    width: 100%;
+  }
+
+  body .pre-foot .news-letter .sgnupp input {
+    width: 100%;
+  }
 }
 
-body .pre-foot .sub img {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-body .pre-foot .sub .subimg2 {
-  margin-top: -200px;
-  margin-left: 100px;
-}
-
-body .pre-foot .news-letter img {
-  display: none;
-}
-
-body .pre-foot .news-letter .sgnupp {
-  text-align: center;
-  width: 100%;
-}
-
-body .pre-foot .news-letter .sgnupp input {
-  width: 100%;
-}
-
-.editor {
+body .editor {
   margin: 30px 20px;
 }
 
-.editor .no-pad {
+body .editor .no-pad {
   border: 0;
 }
 
-.editor .no-pad .card-body {
+body .editor .no-pad .card-body {
   padding: 20px 0;
 }
 
-.editor .no-pad .card-body h3 a {
+body .editor .no-pad .card-body h3 a {
   color: #333;
   font-size: 24px;
   font-weight: bold;
 }
 
-.us {
+body .us {
   border-top: 1px solid #ccc;
   margin: 30px 20px;
 }
 
-.us .card {
+body .us .card {
   border: 0;
 }
 
-.us .uslink {
+body .us .uslink {
   color: #f72210;
   font-size: 22px;
 }
 
-.us .topic .topilink {
+body .us .topic .topilink {
   color: #333;
   font-size: 20px;
   font-weight: 400;
 }
 
-.us .topic .topilink:hover {
+body .us .topic .topilink:hover {
   color: #f72210;
   text-decoration: none;
 }
 
-.us .no-marg {
+body .us .no-marg {
   border: 0;
   padding: 0 0 10px;
 }
 
-.us .no-marg img {
+body .us .no-marg img {
   margin-right: 20px;
 }
 
-.us .no-marg .no-marglink {
+body .us .no-marg .no-marglink {
   color: #333;
   font-weight: 600;
 }
 
-.us .no-marg .no-marglink:hover {
+body .us .no-marg .no-marglink:hover {
   color: #f72210;
   text-decoration: none;
 }
 
-footer {
+body footer {
   border-top: 1px solid #ccc;
   margin: 20px;
   padding-top: 20px;
 }
 
-footer .d-flex {
+body footer .d-flex {
   border: 0;
 }
 
-footer .footop .nlogo {
+body footer .footop .nlogo {
   height: 36px;
   margin-right: 15px;
   width: 236px;
 }
 
-footer .footop small {
+body footer .footop small {
   font-weight: 300;
 }
 
-footer .footop .socials .d-flex {
+body footer .footop .socials .d-flex {
   border: 0;
 }
 
-footer .footop .socials ul li {
+body footer .footop .socials ul li {
   margin-right: 20px;
 }
 
-footer .footop .socials ul li i {
+body footer .footop .socials ul li i {
   font-size: 26px;
 }
 
 @media (min-width: 768px) {
-  footer .footop .smallscreen {
+  body footer .footop .smallscreen {
     display: none;
   }
 }
 
 @media (max-width: 767px) {
-  footer .footop .thetop {
+  body footer .footop .thetop {
     display: none;
   }
-  footer .footop .nlogo {
+
+  body footer .footop .nlogo {
     height: 36px;
     margin-bottom: 12px;
     width: 200px;
   }
-  footer .footop .socials i {
+
+  body footer .footop .socials i {
     font-size: 26px;
   }
-  footer .footop .socials .d-flex {
+
+  body footer .footop .socials .d-flex {
     padding-left: 0;
     margin-top: 20px;
   }
 }
 
-footer .footom {
+body footer .footom {
   margin-top: -30px;
   border-top: 1px solid #d9d9d9;
 }
 
-footer .footom .fhead {
+body footer .footom .fhead {
   color: #666;
   margin-top: 7px;
 }
 
-footer .footom .fhlink {
+body footer .footom .fhlink {
   color: #615151;
   font-weight: 300;
   font-size: 13px;
 }
 
-footer .footom2 .flink {
+body footer .footom2 .flink {
   color: #666;
   font-size: 13px;
   font-weight: 300;
 }
-/*# sourceMappingURL=style.css.map */
