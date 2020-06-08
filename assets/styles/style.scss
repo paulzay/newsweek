@@ -287,7 +287,7 @@ body {
     color: $lb;
     margin: 30px;
     padding: 20px;
-
+    max-width: 400px;
     .top {
       display: inline;
 
@@ -354,6 +354,7 @@ body {
   }
 
   .pre-foot {
+    border-top: 1px solid #ccc;
     margin: 40px 20px;
     max-width: 1210px;
 
@@ -456,108 +457,109 @@ body {
     }
 
     @media (max-width: 767px) {
-      .sub {
-        display: flex;
-        flex-direction: column;
-
-        img {
-          align-self: center;
-        }
-
-        .subimg2 {
-          margin-top: -100px;
-        }
-      }
-
-      .news-letter {
-        img {
-          display: none;
-        }
-
-        .sgnupp {
-          text-align: center;
-          width: 100%;
-
-          input {
-            width: 100%;
-          }
-        }
-      }
     }
-  }
-
-  .editor {
-    margin: 30px 20px;
-
-    .no-pad {
-      border: 0;
-
-      .card-body {
-        padding: 20px 0;
-
-        h3 a {
-          color: #333;
-          font-size: 24px;
-          font-weight: bold;
-        }
-      }
-    }
-  }
-
-  .us {
-    border-top: 1px solid #ccc;
-    margin: 30px 20px;
-
-    .card {
-      border: 0;
-    }
-
-    .uslink {
-      color: $red;
-      font-size: 22px;
-    }
-
-    .topic {
-      .topilink {
-        color: $lb;
-        font-size: 20px;
-        font-weight: 400;
-
-        &:hover {
-          color: $red;
-          text-decoration: none;
-        }
-      }
-    }
-
-    .no-marg {
-      border: 0;
-      padding: 0 0 10px;
+    .sub {
+      display: flex;
+      flex-direction: column;
 
       img {
-        margin-right: 20px;
+        align-self: center;
       }
 
-      .no-marglink {
-        color: #333;
-        font-weight: 600;
+      .subimg2 {
+        margin-top: -200px;
+        margin-left: 100px;
+      }
+    }
 
-        &:hover {
-          color: $red;
-          text-decoration: none;
+    .news-letter {
+      img {
+        display: none;
+      }
+
+      .sgnupp {
+        text-align: center;
+        width: 100%;
+
+        input {
+          width: 100%;
         }
       }
     }
   }
 }
 
-footer {
-  margin: 20px;
+.editor {
+  margin: 30px 20px;
 
-  .d-flex {
-    border-bottom: 0;
+  .no-pad {
+    border: 0;
+
+    .card-body {
+      padding: 20px 0;
+
+      h3 a {
+        color: #333;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.us {
+  border-top: 1px solid #ccc;
+  margin: 30px 20px;
+
+  .card {
+    border: 0;
   }
 
+  .uslink {
+    color: $red;
+    font-size: 22px;
+  }
+
+  .topic {
+    .topilink {
+      color: $lb;
+      font-size: 20px;
+      font-weight: 400;
+
+      &:hover {
+        color: $red;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .no-marg {
+    border: 0;
+    padding: 0 0 10px;
+
+    img {
+      margin-right: 20px;
+    }
+
+    .no-marglink {
+      color: #333;
+      font-weight: 600;
+
+      &:hover {
+        color: $red;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+footer {
+  border-top: 1px solid #ccc;
+  margin: 20px;
+  padding-top: 20px;
+  .d-flex {
+    border: 0;
+  }
   .footop {
     .nlogo {
       height: 36px;
@@ -569,6 +571,9 @@ footer {
       font-weight: 300;
     }
 
+    .socials .d-flex {
+      border: 0;
+    }
     .socials ul li {
       margin-right: 20px;
 
@@ -576,7 +581,8 @@ footer {
         font-size: 26px;
       }
     }
-
+    .thetop {
+    }
     @media (min-width: 768px) {
       .smallscreen {
         display: none;
@@ -587,7 +593,6 @@ footer {
       .thetop {
         display: none;
       }
-
       .nlogo {
         height: 36px;
         margin-bottom: 12px;
@@ -608,6 +613,8 @@ footer {
   }
 
   .footom {
+    margin-top: -30px;
+    border-top: 1px solid #d9d9d9;
     .fhead {
       color: #666;
       margin-top: 7px;
@@ -618,7 +625,8 @@ footer {
       font-weight: 300;
       font-size: 13px;
     }
-
+  }
+  .footom2 {
     .flink {
       color: #666;
       font-size: 13px;

@@ -46,11 +46,9 @@ body header .btn-yellow {
     top: 0;
     z-index: 999;
   }
-
   body header .img-logo {
     width: 40%;
   }
-
   body header .date {
     display: none;
   }
@@ -65,15 +63,12 @@ body header .btn-yellow {
     top: 0;
     z-index: 999;
   }
-
   body header svg {
     width: 40%;
   }
-
   body header .date {
     display: none;
   }
-
   body header .mynav {
     display: none;
   }
@@ -272,6 +267,7 @@ body .sgnup {
   color: #333;
   margin: 30px;
   padding: 20px;
+  max-width: 400px;
 }
 
 body .sgnup .top {
@@ -339,6 +335,7 @@ body .mag-head {
 }
 
 body .pre-foot {
+  border-top: 1px solid #ccc;
   margin: 40px 20px;
   max-width: 1210px;
 }
@@ -441,109 +438,110 @@ body .pre-foot .news-letter .sgnupp form .form-text {
   height: 35px;
 }
 
-@media (max-width: 767px) {
-  body .pre-foot .sub {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-
-  body .pre-foot .sub img {
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center;
-  }
-
-  body .pre-foot .sub .subimg2 {
-    margin-top: -100px;
-  }
-
-  body .pre-foot .news-letter img {
-    display: none;
-  }
-
-  body .pre-foot .news-letter .sgnupp {
-    text-align: center;
-    width: 100%;
-  }
-
-  body .pre-foot .news-letter .sgnupp input {
-    width: 100%;
-  }
+body .pre-foot .sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-body .editor {
+body .pre-foot .sub img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body .pre-foot .sub .subimg2 {
+  margin-top: -200px;
+  margin-left: 100px;
+}
+
+body .pre-foot .news-letter img {
+  display: none;
+}
+
+body .pre-foot .news-letter .sgnupp {
+  text-align: center;
+  width: 100%;
+}
+
+body .pre-foot .news-letter .sgnupp input {
+  width: 100%;
+}
+
+.editor {
   margin: 30px 20px;
 }
 
-body .editor .no-pad {
+.editor .no-pad {
   border: 0;
 }
 
-body .editor .no-pad .card-body {
+.editor .no-pad .card-body {
   padding: 20px 0;
 }
 
-body .editor .no-pad .card-body h3 a {
+.editor .no-pad .card-body h3 a {
   color: #333;
   font-size: 24px;
   font-weight: bold;
 }
 
-body .us {
+.us {
   border-top: 1px solid #ccc;
   margin: 30px 20px;
 }
 
-body .us .card {
+.us .card {
   border: 0;
 }
 
-body .us .uslink {
+.us .uslink {
   color: #f72210;
   font-size: 22px;
 }
 
-body .us .topic .topilink {
+.us .topic .topilink {
   color: #333;
   font-size: 20px;
   font-weight: 400;
 }
 
-body .us .topic .topilink:hover {
+.us .topic .topilink:hover {
   color: #f72210;
   text-decoration: none;
 }
 
-body .us .no-marg {
+.us .no-marg {
   border: 0;
   padding: 0 0 10px;
 }
 
-body .us .no-marg img {
+.us .no-marg img {
   margin-right: 20px;
 }
 
-body .us .no-marg .no-marglink {
+.us .no-marg .no-marglink {
   color: #333;
   font-weight: 600;
 }
 
-body .us .no-marg .no-marglink:hover {
+.us .no-marg .no-marglink:hover {
   color: #f72210;
   text-decoration: none;
 }
 
 footer {
+  border-top: 1px solid #ccc;
   margin: 20px;
+  padding-top: 20px;
 }
 
 footer .d-flex {
-  border-bottom: 0;
+  border: 0;
 }
 
 footer .footop .nlogo {
@@ -554,6 +552,10 @@ footer .footop .nlogo {
 
 footer .footop small {
   font-weight: 300;
+}
+
+footer .footop .socials .d-flex {
+  border: 0;
 }
 
 footer .footop .socials ul li {
@@ -574,21 +576,23 @@ footer .footop .socials ul li i {
   footer .footop .thetop {
     display: none;
   }
-
   footer .footop .nlogo {
     height: 36px;
     margin-bottom: 12px;
     width: 200px;
   }
-
   footer .footop .socials i {
     font-size: 26px;
   }
-
   footer .footop .socials .d-flex {
     padding-left: 0;
     margin-top: 20px;
   }
+}
+
+footer .footom {
+  margin-top: -30px;
+  border-top: 1px solid #d9d9d9;
 }
 
 footer .footom .fhead {
@@ -602,8 +606,9 @@ footer .footom .fhlink {
   font-size: 13px;
 }
 
-footer .footom .flink {
+footer .footom2 .flink {
   color: #666;
   font-size: 13px;
   font-weight: 300;
 }
+/*# sourceMappingURL=style.css.map */
