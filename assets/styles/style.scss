@@ -26,7 +26,7 @@ body {
   background-color: $white;
   color: $lb;
   font-size: 16px;
-  max-width: 100%;
+  max-width: 1440px;
   overflow-x: hidden;
 
   header {
@@ -470,9 +470,15 @@ body {
       }
 
       .news-letter {
+        img {
+          display: none;
+        }
         .sgnupp {
+          text-align: center;
           width: 100%;
-          overflow: hidden;
+          input {
+            width: 100%;
+          }
         }
       }
     }
