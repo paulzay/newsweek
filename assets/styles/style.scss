@@ -26,7 +26,8 @@ body {
   background-color: $white;
   color: $lb;
   font-size: 16px;
-  max-width: 1310px;
+  max-width: 100%;
+  overflow-x: hidden;
 
   header {
     background-color: $red;
@@ -465,6 +466,12 @@ body {
 
         .subimg2 {
           margin-top: -100px;
+        }
+      }
+      .news-letter {
+        .sgnupp {
+          width: 100%;
+          overflow: hidden;
         }
       }
     }

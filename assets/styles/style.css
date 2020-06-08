@@ -10,7 +10,8 @@ body {
   background-color: #fff;
   color: #333;
   font-size: 16px;
-  max-width: 1310px;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body header {
@@ -45,11 +46,9 @@ body header .btn-yellow {
     top: 0;
     z-index: 999;
   }
-
   body header .img-logo {
     width: 40%;
   }
-
   body header .date {
     display: none;
   }
@@ -64,15 +63,12 @@ body header .btn-yellow {
     top: 0;
     z-index: 999;
   }
-
   body header svg {
     width: 40%;
   }
-
   body header .date {
     display: none;
   }
-
   body header .mynav {
     display: none;
   }
@@ -447,18 +443,20 @@ body .pre-foot .news-letter .sgnupp form .form-text {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-
   body .pre-foot .sub img {
     -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
-
   body .pre-foot .sub .subimg2 {
     margin-top: -100px;
+  }
+  body .pre-foot .news-letter .sgnupp {
+    width: 100%;
+    overflow: hidden;
   }
 }
 
@@ -560,17 +558,14 @@ footer .footop .socials ul li i {
   footer .footop .thetop {
     display: none;
   }
-
   footer .footop .nlogo {
     height: 36px;
     margin-bottom: 12px;
     width: 200px;
   }
-
   footer .footop .socials i {
     font-size: 26px;
   }
-
   footer .footop .socials .d-flex {
     padding-left: 0;
     margin-top: 20px;
@@ -593,3 +588,4 @@ footer .footom .flink {
   font-size: 13px;
   font-weight: 300;
 }
+/*# sourceMappingURL=style.css.map */
