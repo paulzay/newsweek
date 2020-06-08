@@ -35,7 +35,8 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 
-    svg {
+    .img-logo {
+      width: 100%;
       fill: $white;
     }
 
@@ -56,7 +57,7 @@ body {
       top: 0;
       z-index: 999;
 
-      svg {
+      .img-logo {
         width: 40%;
       }
 
@@ -542,9 +543,8 @@ footer {
   }
 
   .footop {
-    .ft-logo svg {
+    .nlogo {
       height: 36px;
-      margin-bottom: 12px;
       margin-right: 15px;
       width: 236px;
     }
@@ -554,13 +554,39 @@ footer {
     }
 
     .socials ul li {
-      margin-left: 20px;
+      margin-right: 20px;
+
+      i {
+        font-size: 26px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .smallscreen {
+        display: none;
+      }
     }
 
     @media (max-width: 767px) {
       .thetop {
-        display: flex;
-        flex-direction: column;
+        display: none;
+      }
+
+      .nlogo {
+        height: 36px;
+        margin-bottom: 12px;
+        width: 200px;
+      }
+
+      .socials {
+        i {
+          font-size: 26px;
+        }
+
+        .d-flex {
+          padding-left: 0;
+          margin-top: 20px;
+        }
       }
     }
   }
