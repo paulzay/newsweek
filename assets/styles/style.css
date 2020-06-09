@@ -1,0 +1,623 @@
+* a {
+  text-decoration: none;
+}
+
+* li {
+  list-style: none;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  max-width: 1440px;
+  overflow-x: hidden;
+}
+
+body header {
+  background-color: #f72210;
+  color: #fff;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+body header .img-logo {
+  width: 100%;
+  fill: #fff;
+}
+
+body header .login {
+  color: #fff;
+}
+
+body header .btn-yellow {
+  background-color: yellow;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 991px) {
+  body header {
+    height: 60px;
+    padding: 10px 20px 20px 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  body header .img-logo {
+    width: 40%;
+  }
+
+  body header .date {
+    display: none;
+  }
+}
+
+@media (max-width: 490px) {
+  body header {
+    height: 60px;
+    padding: 10px 20px 20px 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  body header svg {
+    width: 40%;
+  }
+
+  body header .date {
+    display: none;
+  }
+
+  body header .mynav {
+    display: none;
+  }
+}
+
+body .mynav {
+  background-color: #fff;
+  border-bottom: 1px solid #f4f5f6;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+body .mynav a {
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+body .mynav input {
+  border: 0;
+  width: 70px;
+  margin-top: 0;
+  height: 20px;
+}
+
+@media (max-width: 991px) {
+  body .mynav {
+    display: none;
+    background-color: gray;
+  }
+}
+
+body .categories {
+  margin: 30px 15px;
+}
+
+body .ft-pad {
+  border: 0;
+}
+
+body .ft-pad .card-body {
+  padding: 20px 0;
+}
+
+body .ft-pad .card-body .ftplink {
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+body .ft-pad .card-body p {
+  font-size: 15px;
+}
+
+body .tp-story .ft-padd {
+  border: 0;
+}
+
+body .tp-story .ft-padd .card-body {
+  padding: 20px 0;
+}
+
+body .tp-story .ft-padd .ctext {
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+body .tp-story .noo-pad {
+  border: 0;
+  margin-right: 10px;
+  padding: 20px 0;
+}
+
+body .tp-story .noo-pad .hlink {
+  color: #999;
+}
+
+body .tp-story .noo-pad img {
+  width: 95%;
+}
+
+body .tp-story .more-stories .st-padd {
+  border: 0;
+  border-top: 1px solid #999;
+  padding: 10px 0;
+}
+
+body .tp-story .more-stories .st-padd .stimg {
+  float: left;
+  margin-right: 20px;
+}
+
+body .tp-story .more-stories .st-padd .mrlink {
+  color: #000;
+  font-size: 16px;
+}
+
+body .tp-story .more-stories .st-padd p {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+body .d8 {
+  border-top: 0;
+}
+
+body .db8 {
+  border: 0;
+  border-top: 1px solid #999;
+}
+
+body .db8 .dbimg {
+  float: left;
+  margin-right: 20px;
+}
+
+body .db8 .dblinkk {
+  color: #333;
+}
+
+body .db8 .author {
+  color: #555;
+  font-size: 14px;
+}
+
+body .debate .dtop {
+  border-bottom: 3px solid blue;
+  border-top: 3px solid #f72210;
+  margin-bottom: 20px;
+}
+
+body .debate .d8 {
+  border-top: 0;
+}
+
+body .debate .db8 {
+  border: 0;
+  border-top: 1px solid #999;
+}
+
+body .debate .db8 .dbimg {
+  float: left;
+  margin-right: 20px;
+}
+
+body .debate .db8 .dblinkk {
+  color: #555;
+}
+
+body .debate .db8 .author {
+  color: #000;
+  font-size: 14px;
+}
+
+body .debate .db88 {
+  border: 0;
+  border-top: 1px solid #555;
+}
+
+body .debate .db88 .dbimg {
+  float: right;
+}
+
+body .debate .db88 .dblink {
+  color: #555;
+}
+
+body .debate .db88 .author {
+  color: #555;
+  font-size: 14px;
+}
+
+body .d-flex {
+  background-color: #fff;
+  border-bottom: 1px solid #555;
+  font-size: 1.1em;
+  height: 3.5em;
+  padding-top: 10px;
+}
+
+body .d-flex .nav-link {
+  border-right: 1px solid #555;
+  color: #333;
+}
+
+body .row h3 {
+  color: #999;
+  font-size: 16px;
+}
+
+body .sgnup {
+  background-color: #f4f5f6;
+  border: 1px solid #e5e5e5;
+  color: #333;
+  margin: 30px;
+  padding: 20px;
+  max-width: 400px;
+}
+
+body .sgnup .top {
+  display: inline;
+}
+
+body .sgnup .top .logoimg {
+  float: left;
+  margin-right: 20px;
+}
+
+body .sgnup form {
+  margin-top: 15px;
+}
+
+body .sgnup form .f-text {
+  border: 1px solid #e0e1e1;
+  font-weight: 300;
+  line-height: 30px;
+  padding-left: 10px;
+  width: 100%;
+}
+
+body .sgnup form .submit {
+  background-color: #f72210;
+  border: none;
+  width: 100%;
+  margin-top: 10px;
+  height: 30px;
+  color: #fff;
+}
+
+body .magazine {
+  margin: 30px 20px;
+}
+
+body .magazine .feats a {
+  color: #333;
+  font-size: 20px;
+  text-align: center;
+}
+
+body .magazine .ft-pad {
+  border: 0;
+  margin-top: 50px;
+}
+
+body .magazine .ft-pad .card-body {
+  padding: 10px 0;
+}
+
+body .magazine .ft-pad .card-body .cat span:nth-child(1) {
+  background-color: #f72210;
+  color: white;
+}
+
+body .magazine .ft-pad .card-body h3 a {
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+body .mag-head {
+  text-align: center;
+}
+
+body .pre-foot {
+  border-top: 1px solid #ccc;
+  margin: 40px 20px;
+  max-width: 1210px;
+}
+
+body .pre-foot h2 {
+  font-size: 18px;
+  color: #f72210;
+}
+
+body .pre-foot .pre-card h3 {
+  color: #000;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+body .pre-foot .pre-card .crd-text {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2em;
+  margin-top: 15px;
+}
+
+body .pre-foot .pre-card button {
+  background-color: #f72210;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  height: 40px;
+  width: 150px;
+}
+
+body .pre-foot .sub {
+  background-color: #f4f5f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px;
+}
+
+body .pre-foot .sub .subimg1 {
+  height: 228px;
+  width: 170px;
+}
+
+body .pre-foot .sub .pre-card {
+  margin-left: 20px;
+  padding: 30px;
+}
+
+body .pre-foot .sub .subimg2 {
+  height: 228px;
+  width: 170px;
+  margin-left: -75px;
+  margin-top: 20px;
+}
+
+body .pre-foot .news-letter {
+  background-color: #f4f5f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .pre-foot .news-letter .nsimg {
+  width: 48%;
+}
+
+body .pre-foot .news-letter .sgnupp {
+  background-color: #fff;
+  padding: 30px 20px;
+}
+
+body .pre-foot .news-letter .sgnupp h3 {
+  color: #000;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+body .pre-foot .news-letter .sgnupp p {
+  margin-top: 15px;
+  font-weight: 300;
+  line-height: 1.2em;
+  font-size: 14px;
+}
+
+body .pre-foot .news-letter .sgnupp form .sub-mit {
+  background-color: #f72210;
+  color: #fff;
+  border: none;
+  margin-top: 15px;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+}
+
+body .pre-foot .news-letter .sgnupp form .form-text {
+  font-weight: 300;
+  padding-left: 10px;
+  border: 1px solid #e0e1e1;
+  height: 35px;
+}
+
+@media (max-width: 767px) {
+  body .pre-foot .sub {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  body .pre-foot .sub img {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+  }
+
+  body .pre-foot .sub .subimg2 {
+    margin-top: -200px;
+    margin-left: 100px;
+  }
+
+  body .pre-foot .news-letter img {
+    display: none;
+  }
+
+  body .pre-foot .news-letter .sgnupp {
+    text-align: center;
+    width: 100%;
+  }
+
+  body .pre-foot .news-letter .sgnupp input {
+    width: 100%;
+  }
+}
+
+body .editor {
+  margin: 30px 20px;
+}
+
+body .editor .no-pad {
+  border: 0;
+}
+
+body .editor .no-pad .card-body {
+  padding: 20px 0;
+}
+
+body .editor .no-pad .card-body h3 a {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+body .us {
+  border-top: 1px solid #ccc;
+  margin: 30px 20px;
+}
+
+body .us .card {
+  border: 0;
+}
+
+body .us .uslink {
+  color: #f72210;
+  font-size: 22px;
+}
+
+body .us .topic .topilink {
+  color: #333;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+body .us .topic .topilink:hover {
+  color: #f72210;
+  text-decoration: none;
+}
+
+body .us .no-marg {
+  border: 0;
+  padding: 0 0 10px;
+}
+
+body .us .no-marg img {
+  margin-right: 20px;
+}
+
+body .us .no-marg .no-marglink {
+  color: #333;
+  font-weight: 600;
+}
+
+body .us .no-marg .no-marglink:hover {
+  color: #f72210;
+  text-decoration: none;
+}
+
+body footer {
+  border-top: 1px solid #ccc;
+  margin: 20px;
+  padding-top: 20px;
+}
+
+body footer .d-flex {
+  border: 0;
+}
+
+body footer .footop .nlogo {
+  height: 36px;
+  margin-right: 15px;
+  width: 236px;
+}
+
+body footer .footop small {
+  font-weight: 300;
+}
+
+body footer .footop .socials .d-flex {
+  border: 0;
+}
+
+body footer .footop .socials ul li {
+  margin-right: 20px;
+}
+
+body footer .footop .socials ul li i {
+  font-size: 26px;
+}
+
+@media (min-width: 768px) {
+  body footer .footop .smallscreen {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  body footer .footop .thetop {
+    display: none;
+  }
+
+  body footer .footop .nlogo {
+    height: 36px;
+    margin-bottom: 12px;
+    width: 200px;
+  }
+
+  body footer .footop .socials i {
+    font-size: 26px;
+  }
+
+  body footer .footop .socials .d-flex {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+}
+
+body footer .footom {
+  margin-top: -30px;
+  border-top: 1px solid #d9d9d9;
+}
+
+body footer .footom .fhead {
+  color: #666;
+  margin-top: 7px;
+}
+
+body footer .footom .fhlink {
+  color: #615151;
+  font-weight: 300;
+  font-size: 13px;
+}
+
+body footer .footom2 .flink {
+  color: #666;
+  font-size: 13px;
+  font-weight: 300;
+}
