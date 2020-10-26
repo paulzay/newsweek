@@ -13,10 +13,7 @@
 [Live Demo Link](https://paulzay.github.io/newsweek/)
 
 ## Screenshots
-
-![Screenshot from 2020-06-07 18-09-32](https://user-images.githubusercontent.com/29974825/83973194-757c0900-a8ed-11ea-8dae-0fda45d02e84.png)
-![Screenshot from 2020-06-05 13-04-41](https://user-images.githubusercontent.com/29974825/83973199-7a40bd00-a8ed-11ea-8af5-9e072df3e1ca.png)
-![Screenshot from 2020-06-05 13-04-23](https://user-images.githubusercontent.com/29974825/83973208-82006180-a8ed-11ea-99cd-0fa1114df1ca.png)
+![screencapture-paulzay-github-io-newsweek-2020-10-26-23_05_33](https://user-images.githubusercontent.com/29974825/97222954-2709d100-17e0-11eb-9401-f9b197db647d.png)
 
 # Getting Started 🚀
 
